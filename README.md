@@ -210,8 +210,7 @@ print("📁 Data untuk GNN disimpan sebagai nodes.csv dan edges.csv")
 
 ## 🦯 8. Arsitektur Alur Proses
 
-```mermaid
-graph LR
+```
 A[CSV Tabular Data] --> B[Python ETL Script]
 B --> C[Neo4j Graph Database]
 C --> D[Graph Data Science (Louvain)]
@@ -235,7 +234,3 @@ E --> G[GNN Training Dataset (nodes.csv, edges.csv)]
 
 Proyek ini dikembangkan untuk keperluan riset akademik dan pembuktian konsep.
 Lisensi: **MIT License**
-
----
-
-**© 2025 — GRAFANA: Graph Fraud Analytics by Knight**
