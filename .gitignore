@@ -1,86 +1,31 @@
-# ================================
-# PYTHON ARTIFACTS
-# ================================
+# Python
 __pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-*.egg
-.eggs/
+*.pyc
 
 # Virtual environments
 venv/
 gnn_env/
-.env
-.env.*
 
-# ================================
-# JUPYTER
-# ================================
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# ================================
-# OS FILES
-# ================================
-.DS_Store
-Thumbs.db
-
-# ================================
-# LOGS & TEMP
-# ================================
-logs/
-*.log
-*.tmp
-*.bak
-
-# ================================
-# DATA FILES (AUTO-GENERATED)
-# DO NOT TRACK
-# ================================
+# Data generated
 data/processed/
-data/external/
-data/interim/
+data/exports/
+*.csv
+*.json
 
-neo4j_query_table_data_*.csv
-graf_table.csv
+# Neo4j artifacts
+neo4j_pipeline/*.log
+neo4j_pipeline/*.db
 
-# Neo4j export files (usually large)
-*_nodes_export.csv
-*_edges_export.csv
+# Notebooks checkpoints
+.ipynb_checkpoints/
 
-# ================================
-# GNN OUTPUTS / MODELS
-# ================================
-gnn_model/output/
-gnn_model/output/*.csv
-gnn_model/output/*.pt
-gnn_model/output/*.json
-
-# General model artifacts
+# Model checkpoints
+gnn_model/checkpoints/
 *.pt
 *.pth
-*.h5
-models/
-checkpoints/
 
-# ================================
-# CONFIG / SECRETS
-# ================================
-config.py
-secrets.*
-*.key
-
-# ================================
-# EDITOR / IDE
-# ================================
+# VS Code
 .vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
 
-# ================================
-# GIT LFS POINTERS (OPTIONAL)
-# ================================
-*.bin
-*.npy
+# System files
+.DS_Store
