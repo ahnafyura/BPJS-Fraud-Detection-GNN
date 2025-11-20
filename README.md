@@ -76,19 +76,31 @@
 
 ---
 
-## 🏗️ **Architecture**
+## 🏗️ **Architecture & Pipeline**
 
 ```
-A[Tabular CSV Data]
-  --> B[Python ETL]
-  --> C[Neo4j Graph Database]
-  --> D[Graph Projection (GDS)]
-  --> E[Louvain Community Detection]
-  --> F[Graph Visualization]
-  --> G[GNN Dataset Export]
-```
+mermaid
+flowchart TD
+    %% Data Ingestion
+    DATA[📄 Raw CSV Data] -->|ETL: load_data.py| NEO4J[(🍃 Neo4j Database)]
 
----
+    %% Graph Data Science
+    NEO4J -->|Graph Projection| GDS[⚙️ Neo4j GDS Library]
+    GDS -->|Community Detection| LOUVAIN[Louvain Algorithm]
+    GDS -->|Structural Embedding| N2V[Node2Vec]
+
+    %% AI Modeling
+    subgraph AI_Core [🧠 Hybrid AI Engine]
+        LOUVAIN & N2V -->|Export Features| HYBRID[Hybrid GNN Model]
+        HYBRID -->|GraphSAGE + GAT| EMBED[Node Embeddings]
+        EMBED -->|Ensemble| XGB[XGBoost Classifier]
+    end
+
+    %% Output & Viz
+    XGB -->|Risk Score & Explanation| RESULT[📄 Final Report CSV]
+    RESULT -->|Write Back: update_db.py| NEO4J
+    NEO4J -->|Visual Investigation| BLOOM[🌸 Neo4j Bloom]
+```
 
 # ⚙️ Setup Environment
 
