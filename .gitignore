@@ -1,5 +1,86 @@
+# ================================
+# PYTHON ARTIFACTS
+# ================================
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+gnn_env/
 .env
-__pycache__/config.cpython-313.pyc
-nodes.csv
-edges.csv
-.out
+.env.*
+
+# ================================
+# JUPYTER
+# ================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ================================
+# OS FILES
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# LOGS & TEMP
+# ================================
+logs/
+*.log
+*.tmp
+*.bak
+
+# ================================
+# DATA FILES (AUTO-GENERATED)
+# DO NOT TRACK
+# ================================
+data/processed/
+data/external/
+data/interim/
+
+neo4j_query_table_data_*.csv
+graf_table.csv
+
+# Neo4j export files (usually large)
+*_nodes_export.csv
+*_edges_export.csv
+
+# ================================
+# GNN OUTPUTS / MODELS
+# ================================
+gnn_model/output/
+gnn_model/output/*.csv
+gnn_model/output/*.pt
+gnn_model/output/*.json
+
+# General model artifacts
+*.pt
+*.pth
+*.h5
+models/
+checkpoints/
+
+# ================================
+# CONFIG / SECRETS
+# ================================
+config.py
+secrets.*
+*.key
+
+# ================================
+# EDITOR / IDE
+# ================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ================================
+# GIT LFS POINTERS (OPTIONAL)
+# ================================
+*.bin
+*.npy
