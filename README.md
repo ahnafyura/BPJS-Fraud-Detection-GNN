@@ -1,4 +1,4 @@
-# Grafana: Integrasi Graph Database untuk Fraud Detection dengan Graph Neural Networks & Algoritma Louvain
+# Grafana: Integrasi Graph Database untuk Fraud Detection dengan Graph Neural Networks (GraphSAGE-GAT & XGBoost Ensemble) & Algoritma Louvain
 
 <div align="center">
 
@@ -34,9 +34,9 @@
 <div align="center" style="width: 100%; height: 2px; margin: 20px 0; background: linear-gradient(90deg, transparent, #00d9ff, transparent);"></div>
 </div>
 
-> **GRAFANA** (Graph Fraud Analytics) adalah framework analitik fraud berbasis **Neo4j Graph Database** dan **Graph Data Science (GDS)** untuk mendeteksi jaringan kolusi dalam klaim kesehatan.
-> Sistem ini mengubah data tabular menjadi graf pasien–klaim dan menganalisis komunitas menggunakan algoritma **Louvain**.
-
+> **GRAFANA** (Graph Fraud Analytics) adalah sistem deteksi fraud cerdas yang menggabungkan kekuatan **Neo4j Graph Database** dengan arsitektur Deep Learning **Hybrid GNN (GraphSAGE + GAT)** dan **XGBoost Ensemble**.
+>
+> Sistem ini tidak hanya memetakan hubungan pasien-klaim, tetapi juga mempelajari pola struktural (embedding) untuk memprediksi anomali dengan akurasi tinggi, divisualisasikan langsung melalui **Neo4j Bloom**.
 ---
 
 ## 📑 **Table of Contents**
@@ -57,19 +57,19 @@
 <table align="center" width="100%" style="border: none; table-layout: fixed;">
 <tr>
 <td width="33%" align="center" style="padding: 20px;">
-<h3>🔗 Graph-Based Fraud Mapping</h3>
-<img src="https://img.shields.io/badge/Graph-Modeling-00d9ff?style=for-the-badge" />
-<p>Mengonversi data tabular menjadi graf kompleks yang menghubungkan pasien, klaim, diagnosis, dan fasilitas kesehatan.</p>
+<h3>🔗 Knowledge Graph Construction</h3>
+<img src="https://img.shields.io/badge/Neo4j-Graph_Modeling-00d9ff?style=for-the-badge&logo=neo4j" />
+<p>Mengubah data tabular mentah menjadi graf cerdas yang menghubungkan entitas <b>Patient, Claim, Doctor,</b> dan <b>Hospital</b> untuk mengungkap relasi tersembunyi.</p>
 </td>
 <td width="33%" align="center" style="padding: 20px;">
-<h3>🧠 Community Detection</h3>
-<img src="https://img.shields.io/badge/GDS-Louvain-4ecdc4?style=for-the-badge" />
-<p>Mendeteksi kelompok yang berpotensi melakukan kolusi berdasarkan struktur keterhubungan.</p>
+<h3>🧬 Structural Feature Engineering</h3>
+<img src="https://img.shields.io/badge/Algo-Louvain_&_Node2Vec-4ecdc4?style=for-the-badge" />
+<p>Mengekstraksi fitur graf tingkat lanjut menggunakan algoritma <b>Louvain Community Detection</b> dan <b>Node2Vec Embeddings</b> untuk menangkap konteks komunitas fraud.</p>
 </td>
 <td width="33%" align="center" style="padding: 20px;">
-<h3>📊 GNN Integration</h3>
-<img src="https://img.shields.io/badge/GNN-Dataset_Export-f39c12?style=for-the-badge" />
-<p>Mengekspor nodes & edges untuk pelatihan Graph Neural Network.</p>
+<h3>🤖 Hybrid AI Prediction</h3>
+<img src="https://img.shields.io/badge/Model-GraphSAGE_+_GAT_+_XGBoost-f39c12?style=for-the-badge&logo=pytorch" />
+<p>Model ensemble yang menggabungkan kekuatan induktif <b>GraphSAGE</b>, mekanisme atensi <b>GAT</b>, dan boosting <b>XGBoost</b> untuk klasifikasi risiko tinggi.</p>
 </td>
 </tr>
 </table>
