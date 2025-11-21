@@ -48,8 +48,7 @@ nodes_df, edges_df, N = load_data(NODES_PATH=NODES_PATH)
 # ---------- 2. PREPARE FEATURES (X) ----------
 included_cols = [
     'closeness', 'degree', 
-    'community_density','betweenness','pagerank',
-    'community_size',
+    'community_density','betweenness',
     
     'tarif_seharusnya','tarif_diklaim'
 ]
@@ -68,17 +67,30 @@ x = prepare_features(included_cols=included_cols)
 
 # ---------- 3. PREPARE LABELS (y) ----------
 def prepare_labels():
+    # 1️⃣ Labels
     y_raw = nodes_df['is_fraud'].fillna(0).values
     y = torch.tensor(y_raw, dtype=torch.float, device=DEVICE)
 
     fraud_count = y.sum().item()
     print(f"Total Fraud di Data: {int(fraud_count)} dari {len(nodes_df)} nodes.")
 
-    src = edges_df['source']
-    dst = edges_df['target']
-    edge_index = torch.tensor([src.values, dst.values], dtype=torch.long, device=DEVICE)
+    # 2️⃣ Map node_id to 0..N-1
+    nid_to_idx = {nid: i for i, nid in enumerate(nodes_df['node_id'])}
+
+    # Apply mapping to edges
+    src = edges_df['source'].map(nid_to_idx) # type: ignore
+    dst = edges_df['target'].map(nid_to_idx) # type: ignore
+
+    # Remove any edges with missing nodes
+    mask = src.notna() & dst.notna()
+    src = src[mask].astype(int)
+    dst = dst[mask].astype(int)
+
+    # 3️⃣ Build edge_index
+    edge_index = torch.tensor([src.values, dst.values], dtype=torch.long, device=DEVICE) # type: ignore
 
     return y_raw, y, edge_index
+
 
 
 y_raw, y, edge_index = prepare_labels()
@@ -148,63 +160,68 @@ def create_model():
 model, optimizer, criterion = create_model()
 
 # ---------- 7. TRAINING LOOP ----------
-print("\nStart Training...")
 best_auc = 0
-patience = 100
+patience = 30
 patience_counter = 0
-model_saved = False
 
-for epoch in range(EPOCHS):
-    model.train()
-    optimizer.zero_grad()
-    out = model(x, edge_index)
-    loss = criterion(out[train_mask], y[train_mask])
-    loss.backward()
-    optimizer.step()
-    
-    if epoch % 10 == 0:
-        model.eval()
-        with torch.no_grad():
-            pred_logits = model(x, edge_index)
-            pred_probs = torch.sigmoid(pred_logits)
-            y_true_test = y[test_mask].cpu().numpy()
-            y_pred_test = pred_probs[test_mask].cpu().numpy()
-            
-            try:
-                # Safety check untuk AUC
-                if len(np.unique(y_true_test)) > 1:
-                    auc = roc_auc_score(y_true_test, y_pred_test)
-                    pr = average_precision_score(y_true_test, y_pred_test)
-                else:
-                    auc = 0.5 # Default random guess
-                    pr = 0.0
-            except:
-                auc = 0.0
-                pr = 0.0
+if (not env.SKIP_GNN_TRAINING):
+    print("\nStart Training...")
 
-            print(f"Epoch {epoch:03d} | Loss: {loss.item():.4f} | Test AUC: {auc:.4f}")
-            
-            if auc > best_auc:
-                best_auc = auc
-                patience_counter = 0
-                torch.save(model.state_dict(), env.BEST_GNN_HYBRID_PATH)
-                model_saved = True
-            else:
-                patience_counter += 1
+    for epoch in range(EPOCHS):
+        model.train()
+        optimizer.zero_grad()
+        out = model(x, edge_index)
+        loss = criterion(out[train_mask], y[train_mask])
+        loss.backward()
+        optimizer.step()
+        
+        if epoch % 10 == 0:
+            model.eval()
+            with torch.no_grad():
+                pred_logits = model(x, edge_index)
+                pred_probs = torch.sigmoid(pred_logits)
+                y_true_test = y[test_mask].cpu().numpy()
+                y_pred_test = pred_probs[test_mask].cpu().numpy()
                 
-            if patience_counter >= patience:
-                print("Early stopping triggered.")
-                break
+                try:
+                    # Safety check untuk AUC
+                    if len(np.unique(y_true_test)) > 1:
+                        auc = roc_auc_score(y_true_test, y_pred_test)
+                        pr = average_precision_score(y_true_test, y_pred_test)
+                    else:
+                        auc = 0.5 # Default random guess
+                        pr = 0.0
+                except:
+                    auc = 0.0
+                    pr = 0.0
+
+                print(f"Test AUC: {auc:.4f}")
+
+
+                print(f"Epoch {epoch:03d} | Loss: {loss.item():.4f} | Test AUC: {auc:.4f}")
+                
+                if auc > best_auc:
+                    best_auc = auc
+                    patience_counter = 0
+                    torch.save(model.state_dict(), env.BEST_GNN_HYBRID_PATH)
+                    model_saved = True
+                else:
+                    patience_counter += 1
+                    
+                if patience_counter >= patience:
+                    print("Early stopping triggered.")
+                    break
+    print("\nTraining Finished.")
+    print(f"Best AUC: {best_auc}")
 
 # ---------- 8. FINAL OUTPUT ----------
-print("\nTraining Finished.")
 
 # Safety Load: Hanya load jika file benar-benar ada
-if model_saved and os.path.exists(env.BEST_GNN_HYBRID_PATH):
-    print("Loading best model saved during training...")
+if os.path.exists(env.BEST_GNN_HYBRID_PATH):
+    print("Loading saved model.")
     model.load_state_dict(torch.load(env.BEST_GNN_HYBRID_PATH))
 else:
-    print("Warning: Tidak ada model terbaik yang disimpan (AUC stagnan). Menggunakan model terakhir.")
+    print("Warning: Tidak ada model terbaik yang disimpan. Menggunakan model terakhir.")
 
 model.eval()
 with torch.no_grad():
@@ -217,11 +234,26 @@ nodes_df['fraud_certainty'] = final_probs
 os.makedirs("output", exist_ok=True)
 nodes_df.to_csv(env.RETRAINED_OUTPUT_FILE , index=False)
 
+
+claim_nodes = nodes_df[nodes_df['labels'].str.contains('Claim', na=False)]
+
+valid = nodes_df[['is_fraud', 'fraud_certainty']].dropna()
+pred_labels = np.round(valid['fraud_certainty'].values) # type: ignore
+
+# Boolean column (True/False)
+# claim_nodes['predicted_fraud'] = claim_nodes['fraud_certainty'] > env.CERTAINTY_TRESHOLD
+# claim_nodes['predicted_fraud'] = claim_nodes['predicted_fraud'].astype(int)
+claim_nodes = nodes_df[nodes_df['labels'].str.contains("Claim")].copy()
+claim_nodes['predicted_fraud'] = np.round(claim_nodes['fraud_certainty']).astype(int)
+claim_nodes[['fraud_certainty', 'predicted_fraud']].head() # type: ignore
+
+accuracy = (claim_nodes['predicted_fraud'] == claim_nodes['is_fraud']).mean()
+print(f"Accuracy: {accuracy:.4f}")
+
+
 claims_cols = [
     'node_id', 'tarif_seharusnya', 
     'fraud_type', 'tarif_diklaim', 'catatan', 'lama_rawat', 
-    'is_fraud', 'status_klaim', 'id_klaim', 'name', 'fraud_certainty']
-claim_nodes = nodes_df[nodes_df['labels'].str.contains('Claim', na=False)]
+    'is_fraud', 'status_klaim', 'id_klaim', 'fraud_certainty', 'predicted_fraud']
 claim_nodes.to_csv(env.RESULTS_CLAIMS_FILE, columns=claims_cols, index=False)
-
 print(f"Hasil tersimpan di: {os.path.abspath(env.RESULTS_OUTPUT_FILE)}")

@@ -10,9 +10,8 @@ pw = "neo4j123"
 # ======================
 # PATH CONFIG
 # ======================
-RAW_INPUT_DATA = "./data/raw/claims_synthetic_1200.csv"
-
-DATA_PATH = "./data/raw/claims_synthetic_1200.csv"
+RAW_INPUT_DATA = "./data/raw/claims_synthetic_840.csv"
+# RAW_INPUT_DATA = "./data/raw/claims_synthetic_360.csv"
 
 DATA_PROCESSED_OUT_DIR = "./data/processed/"
 
@@ -29,4 +28,6 @@ RESULTS_CLAIMS_FILE = "./output/claims.csv"
 # TRAINING CONFIG
 # ======================
 
-TEST_SIZE = 0.6
+TEST_SIZE = 0.3
+SKIP_GNN_TRAINING = False
+# SKIP_GNN_TRAINING = True
