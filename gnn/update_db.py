@@ -1,18 +1,18 @@
 # update_db.py
 import pandas as pd
 from py2neo import Graph
+from config import env;
 
 # 1. Konfigurasi
-# Pastikan password benar
-graph = Graph("bolt://localhost:7687", auth=("neo4j", "neo4j123")) 
+graph = Graph(env.url, auth=(env.uname, env.pw)) 
 
 # File hasil training GNN terakhir
-CSV_PATH = "output/gnn_retrained_output.csv"
+CSV_PATH = env.RETRAINED_OUTPUT_FILE
 
-print("📂 Membaca file hasil prediksi...")
+print("Membaca file hasil prediksi...")
 df = pd.read_csv(CSV_PATH)
 
-print(f"🚀 Memulai update untuk {len(df)} nodes ke Neo4j...")
+print(f"Memulai update untuk {len(df)} nodes ke Neo4j...")
 
 # 2. Proses Update (Batching agar cepat)
 # Kita akan menggunakan Cypher query dengan UNWIND untuk kecepatan tinggi
@@ -29,17 +29,17 @@ SET n.gnn_score = row.new_gnn_score,
 """
 
 # Konversi dataframe ke list of dicts untuk dikirim ke Neo4j
-data_batch = df[['node_id', 'new_gnn_score', 'is_fraud']].to_dict('records')
+data_batch = df[['node_id', 'new_gnn_score', 'is_fraud']].to_dict('records') # type: ignore
 
 # Eksekusi Query
 try:
     graph.run(query, batch=data_batch)
-    print("✅ SUKSES! Database Neo4j telah diupdate dengan skor GNN.")
+    print("SUKSES! Database Neo4j telah diupdate dengan skor GNN.")
 except Exception as e:
-    print(f"❌ Terjadi kesalahan: {e}")
+    print(f"Terjadi kesalahan: {e}")
 
 # 3. Verifikasi
-print("\n🔍 Verifikasi Data (Top 5 High Risk):")
+print("\nVerifikasi Data (Top 5 High Risk):")
 check_query = """
 MATCH (n) 
 WHERE n.gnn_score IS NOT NULL 
