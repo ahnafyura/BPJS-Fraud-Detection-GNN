@@ -1,5 +1,34 @@
-.env
-__pycache__/config.cpython-313.pyc
-nodes.csv
-edges.csv
-.out
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+gnn_env/
+
+# Data generated
+data/processed/
+data/gnn_processed/
+/output/
+*.json
+
+# Neo4j artifacts
+neo4j_pipeline/*.log
+neo4j_pipeline/*.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Model checkpoints
+gnn_model/checkpoints/
+*.pt
+*.pth
+
+# VS Code
+.vscode/
+
+# System files
+.DS_Store
+
+
+output/.~lock*

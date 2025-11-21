@@ -1,0 +1,361 @@
+No,ID Klaim,ID Pasien,Diagnosis Utama,Prosedur,Tarif Seharusnya (Rp),Tarif Diklaim (Rp),Jenis Pelayanan,Lama Rawat (hari),Kelas Rawat,Status Klaim,Jenis Fraud (Jika Terbukti),Catatan,is_fraud
+1,CLM000001,P00655,Appendisitis (K35),Rawat Inap Standar,3142869,3293000,Rawat Inap,3,Kelas II,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+2,CLM000002,P00239,UTI (N39),CT Scan Kepala,2512199,2499000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+3,CLM000003,P00007,Persalinan Normal (O80),Kemoterapi,4920743,4720000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+4,CLM000004,P00353,Hepatitis (B15),Obat + Nebulizer,119356,120000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+5,CLM000005,P00634,Stroke Iskemik (I63),CT Scan Kepala,2865763,4155000,Rawat Jalan,4,Kelas III,Ditolak,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 4 hari,1
+6,CLM000006,P00390,Tonsilitis (J35),Pemeriksaan & Obat,86036,88000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+7,CLM000007,P00651,Persalinan Normal (O80),Operasi Tonsilektomi,6359999,6396000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+8,CLM000008,P00058,Gastritis (K29),USG Abdomen,667209,667000,Rawat Jalan,1,Kelas III,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+9,CLM000009,P00659,Epilepsi (G40),Cek Lab + Edukasi,217350,216000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+10,CLM000010,P00371,Gastritis (K29),Cek Lab + Edukasi,219603,561000,Rawat Jalan,1,Kelas I,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+11,CLM000011,P00391,Hepatitis (B15),Pemeriksaan & Obat,85634,155000,Rawat Jalan,1,Kelas III,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+12,CLM000012,P00657,Pneumonia (J18),Pemeriksaan Dokter,55948,55000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+13,CLM000013,P00183,UTI (N39),Fisioterapi,263060,254000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+14,CLM000014,P00553,UTI (N39),Fisioterapi,279920,280000,Rawat Jalan,1,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+15,CLM000015,P00315,Gastritis (K29),Rawat Inap Standar,3312017,9805000,Rawat Inap,6,Kelas III,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+16,CLM000016,P00129,ISPA (J06),Dialisis,1577472,1651000,Rawat Inap,2,Kelas III,Diverifikasi,-,Normal,0
+17,CLM000017,P00707,Fraktur Lengan (S52),Kemoterapi,5624517,5597000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+18,CLM000018,P00239,UTI (N39) (J18),CT Scan Kepala,2404765,2405000,Rawat Jalan,1,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+19,CLM000019,P00339,Diabetes Mellitus (E11),Operasi Tonsilektomi,6485028,6733000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+20,CLM000020,P00249,Gastroenteritis (A09),Endoskopi,1810610,1805000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+21,CLM000021,P00690,Appendisitis (K35),Rawat Inap Standar,2842656,4431000,Rawat Inap,2,Kelas III,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+22,CLM000022,P00286,Epilepsi (G40),Operasi Appendektomi,10951764,11499000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+23,CLM000023,P00096,Gastritis (K29),Cek Lab + Edukasi,182931,181000,Rawat Jalan,1,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+24,CLM000024,P00272,Epilepsi (G40),Obat + Nebulizer,127856,128000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+25,CLM000025,P00223,Hipertensi (I10),CT Scan Kepala,2564281,2655000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+26,CLM000026,P00521,Diabetes Mellitus (E11),USG Abdomen,700660,732000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+27,CLM000027,P00593,Hepatitis (B15),Rawat Inap Standar,3401029,3300000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+28,CLM000028,P00245,Tonsilitis (J35),Operasi ORIF,10879661,10415000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+29,CLM000029,P00577,Appendisitis (K35),Pemeriksaan Dokter,45859,45000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+30,CLM000030,P00449,Anemia (D64),Kemoterapi,4509778,4653000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+31,CLM000031,P00680,Appendisitis (K35),Fisioterapi,234715,230000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+32,CLM000032,P00352,Fraktur Lengan (S52),Dialisis,1369049,1387000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+33,CLM000033,P00046,Demam Berdarah (A91),Paket Persalinan,4151680,4122000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+34,CLM000034,P00078,ISPA (J06),Operasi Tonsilektomi,5462743,13174000,Rawat Inap,1,Kelas III,Ditolak,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+35,CLM000035,P00041,Stroke Iskemik (I63),Operasi Appendektomi,13424138,14060000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+36,CLM000036,P00243,Persalinan Normal (O80),Endoskopi,1769483,1846000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+37,CLM000037,P00255,Tonsilitis (J35),Cek Lab + Edukasi,189978,198000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+38,CLM000038,P00234,Gastritis (K29),Rawat Inap Standar,2963359,5630000,Rawat Inap,9,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 9 hari,1
+39,CLM000039,P00550,Pneumonia (J18),Rawat Inap Standar,3437662,3279000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+40,CLM000040,P00354,Pneumonia (J18),Operasi ORIF,10771963,10235000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+41,CLM000041,P00552,Fraktur Lengan (S52),Paket Persalinan,3913915,4050000,Rawat Inap,5,Kelas I,Disetujui,-,Normal,0
+42,CLM000042,P00308,UTI (N39),Obat + Nebulizer,113755,116000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+43,CLM000043,P00179,Hepatitis (B15),CT Scan Kepala,2381364,2449000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+44,CLM000044,P00330,Epilepsi (G40),Pemeriksaan & Obat,91196,93000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+45,CLM000045,P00291,UTI (N39),Dialisis,1434240,2080000,Rawat Inap,5,Kelas I,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 5 hari,1
+46,CLM000046,P00048,Gastritis (K29),Pemeriksaan & Obat,86366,85000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+47,CLM000047,P00152,Demam Berdarah (A91),Fisioterapi,268494,268000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+48,CLM000048,P00125,Epilepsi (G40),Cek Lab + Edukasi,227501,236000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+49,CLM000049,P00517,Gagal Ginjal Kronik (N18),USG Abdomen,675358,658000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+50,CLM000050,P00534,Gastroenteritis (A09),Dialisis,1451893,1426000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+51,CLM000051,P00142,ISPA (J06),Operasi Appendektomi,11792644,21924000,Rawat Inap,1,Kelas II,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas I padahal Kelas II,1
+52,CLM000052,P00431,Infark Miokard (I21),Fisioterapi,225368,222000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+53,CLM000053,P00430,Anemia (D64),Kemoterapi,4986071,5070000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+54,CLM000054,P00170,Epilepsi (G40),Fisioterapi,261993,266000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+55,CLM000055,P00439,ISPA (J06),USG Abdomen,709572,698000,Rawat Jalan,1,Kelas I,Diverifikasi,-,Normal,0
+56,CLM000056,P00285,Gagal Ginjal Kronik (N18),Obat + Nebulizer,114726,115000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+57,CLM000057,P00668,Hipertensi (I10),Endoskopi,1727345,4636000,Rawat Jalan,1,Kelas III,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+58,CLM000058,P00224,Epilepsi (G40),Kemoterapi,5434907,5225000,Rawat Inap,3,Kelas III,Disetujui,-,Normal,0
+59,CLM000059,P00319,Appendisitis (K35),CT Scan Kepala,2484566,2594000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+60,CLM000060,P00607,Gastritis (komplikasi) (K29),Pemeriksaan Dokter,49340,106000,Rawat Jalan,1,Kelas III,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+61,CLM000061,P00519,Pneumonia (J18),Rawat Inap Standar,3176688,3281000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+62,CLM000062,P00446,Persalinan Normal (O80),Kemoterapi,5081092,5247000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+63,CLM000063,P00331,Gastritis (K29),USG Abdomen,729723,742000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+64,CLM000064,P00507,Pneumonia (J18),Cek Lab + Edukasi,224015,229000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+65,CLM000065,P00011,UTI (N39),Operasi Appendektomi,11520971,11493000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+66,CLM000066,P00459,Demam Berdarah (A91),Pemeriksaan Dokter,52269,52000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+67,CLM000067,P00436,Anemia (D64),Paket Persalinan,3720655,3606000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+68,CLM000068,P00549,Persalinan Normal (O80),Operasi Appendektomi,13080623,13207000,Rawat Inap,1,Kelas III,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+69,CLM000069,P00707,Fraktur Lengan (S52) (R51),Kemoterapi,5447782,5448000,Rawat Inap,2,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+70,CLM000070,P00567,Nyeri Kepala (komplikasi) (R51),Kemoterapi,5217580,11500000,Rawat Inap,2,Kelas II,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+71,CLM000071,P00189,Hipertensi (I10),Obat + Nebulizer,125310,128000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+72,CLM000072,P00577,Nyeri Kepala (R51),Pemeriksaan Dokter,54884,53000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+73,CLM000073,P00462,Epilepsi (G40),Obat + Nebulizer,130202,136000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+74,CLM000074,P00217,Tonsilitis (komplikasi) (J35),Dialisis,1503194,3809000,Rawat Inap,1,Kelas I,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+75,CLM000075,P00034,Gastritis (K29),Obat + Nebulizer,135717,140000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+76,CLM000076,P00678,Fraktur Lengan (S52),Operasi ORIF,11066577,10592000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+77,CLM000077,P00315,Hepatitis (B15),Kemoterapi,5003135,4889000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+78,CLM000078,P00449,Diabetes Mellitus (E11),CT Scan Kepala,2266165,2205000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+79,CLM000079,P00590,Kanker Payudara (C50),Rawat Inap Standar,3387054,5171000,Rawat Inap,3,Kelas II,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+80,CLM000080,P00651,Gastroenteritis (A09),Pemeriksaan Dokter,55721,55000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+81,CLM000081,P00296,Infark Miokard (I21),USG Abdomen,799782,792000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+82,CLM000082,P00002,Anemia (D64),Pemeriksaan & Obat,81969,81000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+83,CLM000083,P00274,Anemia (D64),Cek Lab + Edukasi,215489,312000,Rawat Jalan,1,Kelas II,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+84,CLM000084,P00418,Diabetes Mellitus (E11),Operasi Appendektomi,12295126,12561000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+85,CLM000085,P00280,Gagal Ginjal Kronik (N18),USG Abdomen,697127,727000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+86,CLM000086,P00140,Diabetes Mellitus (E11),Obat + Nebulizer,108076,111000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+87,CLM000087,P00594,Gastroenteritis (A09),USG Abdomen,763502,754000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+88,CLM000088,P00194,Gastritis (K29),CT Scan Kepala,2690767,7159000,Rawat Jalan,1,Kelas II,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+89,CLM000089,P00680,ISPA (J06),Pemeriksaan & Obat,74007,77000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+90,CLM000090,P00468,Demam Berdarah (A91),Kemoterapi,5476906,9185000,Rawat Inap,1,Kelas II,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+91,CLM000091,P00408,Diabetes Mellitus (E11),USG Abdomen,685415,700000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+92,CLM000092,P00555,Hipertensi (I10),CT Scan Kepala,2392178,2294000,Rawat Jalan,1,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+93,CLM000093,P00649,Appendisitis (komplikasi) (K35),Pemeriksaan & Obat,77867,161000,Rawat Jalan,1,Kelas II,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+94,CLM000094,P00544,Gagal Ginjal Kronik (N18),CT Scan Kepala,2637318,2569000,Rawat Jalan,1,Kelas I,Diverifikasi,-,Normal,0
+95,CLM000095,P00147,Gastritis (K29),Pemeriksaan & Obat,81305,80000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+96,CLM000096,P00076,Epilepsi (G40),Paket Persalinan,4445303,4312000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+97,CLM000097,P00495,Appendisitis (K35),Operasi Appendektomi,11685692,12244000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+98,CLM000098,P00282,Demam Berdarah (A91),CT Scan Kepala,2814334,2892000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+99,CLM000099,P00361,Gastritis (K29),Dialisis,1597193,1651000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+100,CLM000100,P00643,Hipertensi (I10),Obat + Nebulizer,117801,206000,Rawat Jalan,6,Kelas I,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 6 hari,1
+101,CLM000101,P00136,Anemia (D64),Fisioterapi,241060,249000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+102,CLM000102,P00303,Pneumonia (J18),Endoskopi,1721526,1752000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+103,CLM000103,P00707,Fraktur Lengan (S52) (R51) (D64),Kemoterapi,5071324,5071000,Rawat Inap,2,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+104,CLM000104,P00689,Tonsilitis (J35),CT Scan Kepala,2544673,4315000,Rawat Jalan,1,Kelas III,Ditolak,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+105,CLM000105,P00336,Hepatitis (B15),Operasi Appendektomi,12747718,12259000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+106,CLM000106,P00039,Nyeri Kepala (R51),Pemeriksaan & Obat,79420,231000,Rawat Jalan,1,Kelas I,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+107,CLM000107,P00554,Gagal Ginjal Kronik (N18),CT Scan Kepala,2634782,2750000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+108,CLM000108,P00707,Stroke Iskemik (I63),Operasi Appendektomi,13742783,13560000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+109,CLM000109,P00661,Stroke Iskemik (I63),Rawat Inap Standar,3318143,3183000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+110,CLM000110,P00655,Hepatitis (B15),Rawat Inap Standar,2751457,4986000,Rawat Inap,2,Kelas III,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+111,CLM000111,P00222,Gastritis (K29),Paket Persalinan,4584028,4808000,Rawat Inap,5,Kelas III,Disetujui,-,Normal,0
+112,CLM000112,P00179,Appendisitis (K35),Dialisis,1570819,1495000,Rawat Inap,3,Kelas I,Disetujui,-,Normal,0
+113,CLM000113,P00130,Gagal Ginjal Kronik (N18),Operasi Tonsilektomi,6169856,5929000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+114,CLM000114,P00630,Hipertensi (I10),Kemoterapi,5559123,10936000,Rawat Inap,3,Kelas II,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+115,CLM000115,P00455,Diabetes Mellitus (E11),Fisioterapi,248806,249000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+116,CLM000116,P00302,Epilepsi (G40),Operasi Tonsilektomi,6376374,6548000,Rawat Inap,2,Kelas I,Disetujui,-,Normal,0
+117,CLM000117,P00221,Gagal Ginjal Kronik (N18),Pemeriksaan & Obat,86592,85000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+118,CLM000118,P00262,Stroke Iskemik (I63),Cek Lab + Edukasi,217229,339000,Rawat Jalan,1,Kelas I,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+119,CLM000119,P00062,Kanker Payudara (C50),Operasi Tonsilektomi,6811694,6759000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+120,CLM000120,P00053,Nyeri Kepala (R51),CT Scan Kepala,2390153,3334000,Rawat Jalan,1,Kelas II,Ditolak,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+121,CLM000121,P00377,Appendisitis (K35),Endoskopi,2058545,2124000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+122,CLM000122,P00659,Anemia (D64),Rawat Inap Standar,3391153,3341000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+123,CLM000123,P00147,Kanker Payudara (C50),Dialisis,1384409,1389000,Rawat Inap,5,Kelas I,Disetujui,-,Normal,0
+124,CLM000124,P00465,Pneumonia (J18),Cek Lab + Edukasi,209811,218000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+125,CLM000125,P00633,Hipertensi (I10),Dialisis,1515766,1481000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+126,CLM000126,P00117,Stroke Iskemik (I63),Operasi ORIF,10667831,10183000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+127,CLM000127,P00614,Hipertensi (I10),Rawat Inap Standar,2917085,3792000,Rawat Inap,4,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 4 hari,1
+128,CLM000128,P00441,Persalinan Normal (O80),Cek Lab + Edukasi,213402,210000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+129,CLM000129,P00044,Gagal Ginjal Kronik (N18),Rawat Inap Standar,3130049,3196000,Rawat Inap,3,Kelas III,Disetujui,-,Normal,0
+130,CLM000130,P00118,Infark Miokard (I21),Rawat Inap Standar,3217207,3173000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+131,CLM000131,P00109,Gastritis (K29),Operasi ORIF,9848783,9684000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+132,CLM000132,P00523,Appendisitis (K35),Operasi Tonsilektomi,6628422,6837000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+133,CLM000133,P00150,Tonsilitis (J35),Operasi Appendektomi,11331438,11641000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+134,CLM000134,P00578,Kanker Payudara (C50),Pemeriksaan & Obat,81378,158000,Rawat Jalan,1,Kelas III,Ditolak,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+135,CLM000135,P00606,Hipertensi (I10),Paket Persalinan,3676731,4780000,Rawat Inap,3,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 3 hari,1
+136,CLM000136,P00520,Infark Miokard (I21),Pemeriksaan & Obat,78430,78000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+137,CLM000137,P00064,Epilepsi (G40),Pemeriksaan Dokter,45489,46000,Rawat Jalan,1,Kelas III,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+138,CLM000138,P00537,UTI (N39),CT Scan Kepala,2734040,2783000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+139,CLM000139,P00647,Pneumonia (J18),Pemeriksaan Dokter,54046,55000,Rawat Jalan,1,Kelas I,Diverifikasi,-,Normal,0
+140,CLM000140,P00154,Pneumonia (J18),Pemeriksaan Dokter,53276,51000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+141,CLM000141,P00087,Nyeri Kepala (R51),Operasi Tonsilektomi,6369037,10414000,Rawat Inap,4,Kelas II,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+142,CLM000142,P00372,Nyeri Kepala (R51),Cek Lab + Edukasi,187747,420000,Rawat Jalan,1,Kelas II,Ditolak,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+143,CLM000143,P00520,Anemia (D64),USG Abdomen,734518,709000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+144,CLM000144,P00710,Hepatitis (B15),Endoskopi,1943813,2035000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+145,CLM000145,P00460,Gastritis (K29),Operasi Tonsilektomi,6652670,6565000,Rawat Inap,5,Kelas II,Diverifikasi,-,Normal,0
+146,CLM000146,P00452,Epilepsi (G40),Endoskopi,1692926,1642000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+147,CLM000147,P00257,Hipertensi (I10),Dialisis,1456898,3125000,Rawat Inap,2,Kelas III,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+148,CLM000148,P00526,ISPA (J06),USG Abdomen,784810,819000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+149,CLM000149,P00406,UTI (N39),Paket Persalinan,4530825,4531000,Rawat Inap,5,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+150,CLM000150,P00666,Pneumonia (J18),Endoskopi,1933232,1863000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+151,CLM000151,P00460,Hepatitis (B15),Rawat Inap Standar,2783390,4581000,Rawat Inap,3,Kelas I,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas I padahal Kelas I,1
+152,CLM000152,P00049,Gastritis (K29),Operasi ORIF,10340134,10477000,Rawat Inap,1,Kelas I,Disetujui,-,Normal,0
+153,CLM000153,P00148,Nyeri Kepala (R51),Operasi ORIF,10660928,10219000,Rawat Inap,3,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+154,CLM000154,P00070,UTI (N39),Operasi Tonsilektomi,6871559,6702000,Rawat Inap,6,Kelas II,Disetujui,-,Normal,0
+155,CLM000155,P00070,Stroke Iskemik (I63),Operasi Appendektomi,10933007,10983000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+156,CLM000156,P00180,Epilepsi (G40),Kemoterapi,4546229,7105000,Rawat Inap,6,Kelas II,Ditolak,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+157,CLM000157,P00043,Pneumonia (J18),Fisioterapi,240832,247000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+158,CLM000158,P00366,Hipertensi (I10),USG Abdomen,700003,696000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+159,CLM000159,P00348,Persalinan Normal (O80),Pemeriksaan & Obat,73652,73000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+160,CLM000160,P00185,Anemia (D64),Obat + Nebulizer,121377,124000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+161,CLM000161,P00455,Stroke Iskemik (I63),Pemeriksaan & Obat,80698,82000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+162,CLM000162,P00059,Diabetes Mellitus (E11),Dialisis,1707296,1646000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+163,CLM000163,P00449,Hipertensi (I10),Cek Lab + Edukasi,227473,217000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+164,CLM000164,P00461,Stroke Iskemik (I63),Paket Persalinan,3998034,4058000,Rawat Inap,4,Kelas III,Disetujui,-,Normal,0
+165,CLM000165,P00117,Demam Berdarah (A91),Kemoterapi,4827220,4712000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+166,CLM000166,P00627,Nyeri Kepala (R51),Kemoterapi,5623348,14693000,Rawat Inap,2,Kelas II,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+167,CLM000167,P00699,Pneumonia (J18),Dialisis,1462483,1412000,Rawat Inap,3,Kelas III,Disetujui,-,Normal,0
+168,CLM000168,P00718,Persalinan Normal (O80),Endoskopi,1726531,4722000,Rawat Jalan,1,Kelas II,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+169,CLM000169,P00587,Stroke Iskemik (I63),Pemeriksaan & Obat,91991,94000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+170,CLM000170,P00420,Kanker Payudara (C50),Pemeriksaan Dokter,53501,53000,Rawat Jalan,1,Kelas III,Diverifikasi,-,Normal,0
+171,CLM000171,P00565,Kanker Payudara (C50),Cek Lab + Edukasi,205905,300000,Rawat Jalan,1,Kelas II,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+172,CLM000172,P00231,Stroke Iskemik (I63),Operasi Tonsilektomi,6226262,5993000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+173,CLM000173,P00547,Diabetes Mellitus (E11),Operasi Tonsilektomi,6663795,6664000,Rawat Inap,2,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+174,CLM000174,P00030,Diabetes Mellitus (E11),Rawat Inap Standar,3179243,3179000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+175,CLM000175,P00297,Nyeri Kepala (R51),Pemeriksaan & Obat,73459,70000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+176,CLM000176,P00496,Epilepsi (G40),Operasi Appendektomi,13002599,13472000,Rawat Inap,5,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+177,CLM000177,P00134,Stroke Iskemik (I63),Operasi Tonsilektomi,5771878,5539000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+178,CLM000178,P00394,Hepatitis (B15),Operasi ORIF,11334378,11585000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+179,CLM000179,P00164,Gastroenteritis (A09),Operasi Tonsilektomi,6158166,15149000,Rawat Inap,1,Kelas II,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas I padahal Kelas II,1
+180,CLM000180,P00362,Hipertensi (I10),Rawat Inap Standar,3052940,3064000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+181,CLM000181,P00442,ISPA (J06),Fisioterapi,250036,252000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+182,CLM000182,P00567,Nyeri Kepala (R51),Pemeriksaan Dokter,57363,58000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+183,CLM000183,P00100,Infark Miokard (I21),Paket Persalinan,4100077,5553000,Rawat Inap,3,Kelas II,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas I padahal Kelas II,1
+184,CLM000184,P00342,Gastroenteritis (A09),Operasi Tonsilektomi,5643753,5644000,Rawat Inap,1,Kelas I,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+185,CLM000185,P00307,Kanker Payudara (C50),Paket Persalinan,3968357,4037000,Rawat Inap,4,Kelas III,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+186,CLM000186,P00598,Nyeri Kepala (R51),Endoskopi,2057425,2074000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+187,CLM000187,P00053,Kanker Payudara (C50),Pemeriksaan & Obat,79603,82000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+188,CLM000188,P00587,Appendisitis (K35),Operasi Appendektomi,11411675,11414000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+189,CLM000189,P00483,Hipertensi (I10),Kemoterapi,5097963,5035000,Rawat Inap,4,Kelas II,Diverifikasi,-,Normal,0
+190,CLM000190,P00471,Anemia (D64),Paket Persalinan,4403652,4300000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+191,CLM000191,P00253,Tonsilitis (J35),Operasi Tonsilektomi,5833506,5663000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+192,CLM000192,P00325,Gastroenteritis (A09),Paket Persalinan,4495760,4448000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+193,CLM000193,P00150,Nyeri Kepala (R51),Rawat Inap Standar,3191979,3271000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+194,CLM000194,P00552,Tonsilitis (J35),Fisioterapi,240153,244000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+195,CLM000195,P00654,Gastritis (K29),Rawat Inap Standar,2703886,7776000,Rawat Inap,3,Kelas II,Ditolak,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+196,CLM000196,P00417,Gastroenteritis (A09),Pemeriksaan & Obat,73183,75000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+197,CLM000197,P00238,Anemia (D64),Kemoterapi,4719735,4918000,Rawat Inap,3,Kelas III,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+198,CLM000198,P00452,Epilepsi (G40) (A09),Endoskopi,1778750,1779000,Rawat Jalan,1,Kelas III,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+199,CLM000199,P00344,Nyeri Kepala (R51),Pemeriksaan & Obat,77456,80000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+200,CLM000200,P00470,Tonsilitis (J35),Kemoterapi,5343001,5179000,Rawat Inap,3,Kelas I,Disetujui,-,Normal,0
+201,CLM000201,P00655,Infark Miokard (I21),USG Abdomen,662336,639000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+202,CLM000202,P00255,Demam Berdarah (A91),Obat + Nebulizer,117058,120000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+203,CLM000203,P00670,Stroke Iskemik (I63),Kemoterapi,5006770,5008000,Rawat Inap,2,Kelas I,Diverifikasi,-,Normal,0
+204,CLM000204,P00319,Appendisitis (K35),Dialisis,1529318,1522000,Rawat Inap,1,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+205,CLM000205,P00383,Gagal Ginjal Kronik (N18),Kemoterapi,5452324,5551000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+206,CLM000206,P00084,UTI (N39),Pemeriksaan & Obat,83454,110000,Rawat Jalan,1,Kelas I,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+207,CLM000207,P00533,Epilepsi (G40),Pemeriksaan Dokter,50568,48000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+208,CLM000208,P00426,Epilepsi (G40),CT Scan Kepala,2263606,2208000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+209,CLM000209,P00224,Kanker Payudara (C50),Pemeriksaan Dokter,45753,48000,Rawat Jalan,1,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+210,CLM000210,P00484,Hipertensi (I10),Obat + Nebulizer,129878,136000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+211,CLM000211,P00392,Epilepsi (G40),USG Abdomen,724377,735000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+212,CLM000212,P00183,Anemia (komplikasi) (D64),Operasi ORIF,11446226,25119000,Rawat Inap,2,Kelas III,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+213,CLM000213,P00435,Anemia (D64),Operasi ORIF,11343525,11599000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+214,CLM000214,P00677,Gagal Ginjal Kronik (N18),CT Scan Kepala,2529025,2573000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+215,CLM000215,P00251,Hipertensi (I10),Operasi ORIF,9141110,9145000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+216,CLM000216,P00590,Pneumonia (J18),CT Scan Kepala,2575781,2554000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+217,CLM000217,P00571,Kanker Payudara (C50),Fisioterapi,285768,298000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+218,CLM000218,P00538,Pneumonia (J18),Kemoterapi,4801210,7709000,Rawat Inap,3,Kelas II,Ditolak,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+219,CLM000219,P00148,Epilepsi (G40),Fisioterapi,233380,227000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+220,CLM000220,P00663,Diabetes Mellitus (E11),Fisioterapi,236905,231000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+221,CLM000221,P00618,Hipertensi (I10),USG Abdomen,727798,726000,Rawat Jalan,1,Kelas I,Diverifikasi,-,Normal,0
+222,CLM000222,P00341,Nyeri Kepala (R51),Fisioterapi,271679,279000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+223,CLM000223,P00713,Hepatitis (B15),Kemoterapi,4853823,4837000,Rawat Inap,6,Kelas II,Disetujui,-,Normal,0
+224,CLM000224,P00316,Tonsilitis (J35),Paket Persalinan,4361628,4283000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+225,CLM000225,P00372,Nyeri Kepala (R51) (N18),Cek Lab + Edukasi,212846,213000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+226,CLM000226,P00428,Nyeri Kepala (R51),Cek Lab + Edukasi,204965,208000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+227,CLM000227,P00264,Gastroenteritis (A09),Kemoterapi,4674948,4697000,Rawat Inap,2,Kelas II,Disetujui,-,Normal,0
+228,CLM000228,P00556,Hipertensi (I10),Operasi Tonsilektomi,5472771,5203000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+229,CLM000229,P00646,Gastritis (K29),Pemeriksaan Dokter,52722,54000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+230,CLM000230,P00495,Gastroenteritis (A09),Rawat Inap Standar,3101803,4963000,Rawat Inap,6,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 6 hari,1
+231,CLM000231,P00715,Gagal Ginjal Kronik (N18),Endoskopi,1898901,2662000,Rawat Jalan,1,Kelas I,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+232,CLM000232,P00407,Diabetes Mellitus (E11),Paket Persalinan,3899974,4028000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+233,CLM000233,P00666,Hipertensi (komplikasi) (I10),Pemeriksaan Dokter,53785,87000,Rawat Jalan,1,Kelas II,Ditolak,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+234,CLM000234,P00661,Pneumonia (J18),CT Scan Kepala,2419434,6928000,Rawat Jalan,1,Kelas III,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+235,CLM000235,P00288,Anemia (D64),CT Scan Kepala,2616897,4715000,Rawat Jalan,1,Kelas I,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+236,CLM000236,P00408,Diabetes Mellitus (E11),Obat + Nebulizer,128311,129000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+237,CLM000237,P00144,Diabetes Mellitus (E11),Operasi Tonsilektomi,5910889,6070000,Rawat Inap,7,Kelas I,Diverifikasi,-,Normal,0
+238,CLM000238,P00407,Pneumonia (J18),Rawat Inap Standar,3023885,6397000,Rawat Inap,2,Kelas III,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas II padahal Kelas III,1
+239,CLM000239,P00088,Hepatitis (B15),Obat + Nebulizer,130189,298000,Rawat Jalan,1,Kelas III,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+240,CLM000240,P00006,Nyeri Kepala (R51),Pemeriksaan & Obat,80976,159000,Rawat Jalan,1,Kelas III,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas II padahal Kelas III,1
+241,CLM000241,P00027,Diabetes Mellitus (E11),Paket Persalinan,3612340,3581000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+242,CLM000242,P00573,Gastritis (K29),CT Scan Kepala,2417754,2332000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+243,CLM000243,P00283,Gagal Ginjal Kronik (N18),Obat + Nebulizer,129626,130000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+244,CLM000244,P00469,Appendisitis (K35),Cek Lab + Edukasi,198994,206000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+245,CLM000245,P00441,Hepatitis (B15),Cek Lab + Edukasi,188881,189000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+246,CLM000246,P00327,Nyeri Kepala (R51),Kemoterapi,4850375,4989000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+247,CLM000247,P00578,Fraktur Lengan (S52),CT Scan Kepala,2538513,2591000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+248,CLM000248,P00299,Diabetes Mellitus (E11),USG Abdomen,674219,651000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+249,CLM000249,P00387,Diabetes Mellitus (E11),Pemeriksaan & Obat,89392,89000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+250,CLM000250,P00369,Anemia (D64),CT Scan Kepala,2353961,2380000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+251,CLM000251,P00661,Infark Miokard (I21),Endoskopi,1719900,3526000,Rawat Jalan,8,Kelas III,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 8 hari,1
+252,CLM000252,P00595,Kanker Payudara (C50),Operasi Appendektomi,12871311,12422000,Rawat Inap,1,Kelas II,Ditolak,-,Ditolak (alasan administratif / dokumen tidak lengkap),0
+253,CLM000253,P00495,Appendisitis (K35),Obat + Nebulizer,129904,128000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+254,CLM000254,P00212,UTI (N39),Pemeriksaan & Obat,78378,77000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+255,CLM000255,P00118,Demam Berdarah (A91),USG Abdomen,720298,1182000,Rawat Jalan,1,Kelas II,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+256,CLM000256,P00437,Epilepsi (G40),Operasi Appendektomi,11986747,12271000,Rawat Inap,5,Kelas II,Diverifikasi,-,Normal,0
+257,CLM000257,P00461,Kanker Payudara (C50),Operasi ORIF,10759399,11078000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+258,CLM000258,P00550,Persalinan Normal (O80),Paket Persalinan,4089483,4280000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+259,CLM000259,P00398,Hepatitis (B15),Operasi ORIF,11034345,11262000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+260,CLM000260,P00630,Kanker Payudara (C50),Pemeriksaan Dokter,53667,54000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+261,CLM000261,P00429,Hepatitis (B15),Cek Lab + Edukasi,225958,236000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+262,CLM000262,P00171,Gastroenteritis (A09),Obat + Nebulizer,133965,140000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+263,CLM000263,P00200,Infark Miokard (I21),Operasi Tonsilektomi,6065777,5864000,Rawat Inap,5,Kelas II,Disetujui,-,Normal,0
+264,CLM000264,P00226,Nyeri Kepala (R51),Rawat Inap Standar,3124237,3209000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+265,CLM000265,P00524,Appendisitis (K35),CT Scan Kepala,2588777,2655000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+266,CLM000266,P00452,Anemia (D64),Operasi Appendektomi,11693126,12277000,Rawat Inap,4,Kelas I,Disetujui,-,Normal,0
+267,CLM000267,P00357,Diabetes Mellitus (E11),Pemeriksaan & Obat,83758,83000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+268,CLM000268,P00648,Gagal Ginjal Kronik (N18),Cek Lab + Edukasi,208503,209000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+269,CLM000269,P00173,Pneumonia (J18),Kemoterapi,5731860,5835000,Rawat Inap,7,Kelas II,Disetujui,-,Normal,0
+270,CLM000270,P00422,Hipertensi (I10),Obat + Nebulizer,132854,133000,Rawat Jalan,1,Kelas III,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+271,CLM000271,P00693,Infark Miokard (I21),Pemeriksaan & Obat,81039,82000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+272,CLM000272,P00096,Infark Miokard (I21),Operasi Tonsilektomi,6132066,6182000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+273,CLM000273,P00096,Epilepsi (G40),Dialisis,1713048,1769000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+274,CLM000274,P00331,Nyeri Kepala (R51),Paket Persalinan,4282551,4089000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+275,CLM000275,P00663,Diabetes Mellitus (E11) (A91),Fisioterapi,225197,225000,Rawat Jalan,1,Kelas III,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+276,CLM000276,P00136,Nyeri Kepala (R51),Cek Lab + Edukasi,182589,559000,Rawat Jalan,1,Kelas I,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+277,CLM000277,P00441,Hepatitis (B15) (N18),Cek Lab + Edukasi,173673,174000,Rawat Jalan,1,Kelas II,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+278,CLM000278,P00532,Epilepsi (G40),Rawat Inap Standar,3016735,2906000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+279,CLM000279,P00393,Diabetes Mellitus (E11),Kemoterapi,4978401,5134000,Rawat Inap,3,Kelas I,Diverifikasi,-,Normal,0
+280,CLM000280,P00657,ISPA (J06),Pemeriksaan Dokter,47663,49000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+281,CLM000281,P00631,Epilepsi (G40),USG Abdomen,733175,725000,Rawat Jalan,1,Kelas I,Diverifikasi,-,Normal,0
+282,CLM000282,P00323,ISPA (J06),Operasi Appendektomi,12963538,12685000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+283,CLM000283,P00028,Nyeri Kepala (R51),Operasi Appendektomi,12284663,15850000,Rawat Inap,3,Kelas III,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+284,CLM000284,P00609,Diabetes Mellitus (E11),Operasi Tonsilektomi,5948118,12607000,Rawat Inap,1,Kelas III,Ditolak,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas II padahal Kelas III,1
+285,CLM000285,P00075,Demam Berdarah (A91),CT Scan Kepala,2842924,2814000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+286,CLM000286,P00514,Gagal Ginjal Kronik (N18),Operasi ORIF,9693669,9509000,Rawat Inap,6,Kelas I,Disetujui,-,Normal,0
+287,CLM000287,P00209,ISPA (J06),Operasi Tonsilektomi,6421583,6143000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+288,CLM000288,P00245,Hipertensi (I10),Operasi Appendektomi,10965085,11147000,Rawat Inap,2,Kelas III,Disetujui,-,Normal,0
+289,CLM000289,P00180,Appendisitis (K35),Rawat Inap Standar,3092254,3180000,Rawat Inap,4,Kelas III,Disetujui,-,Normal,0
+290,CLM000290,P00171,Stroke Iskemik (I63),Cek Lab + Edukasi,196750,195000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+291,CLM000291,P00270,Kanker Payudara (C50),Dialisis,1487882,3181000,Rawat Inap,1,Kelas II,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+292,CLM000292,P00588,Appendisitis (K35),Operasi Appendektomi,11891929,33968000,Rawat Inap,3,Kelas I,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+293,CLM000293,P00037,Anemia (D64),Endoskopi,1763970,1821000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+294,CLM000294,P00123,UTI (N39),Dialisis,1707779,1634000,Rawat Inap,5,Kelas I,Disetujui,-,Normal,0
+295,CLM000295,P00707,Fraktur Lengan (S52) (R51) (D64) (R51),Kemoterapi,4933884,4934000,Rawat Inap,2,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+296,CLM000296,P00638,Gastritis (K29),Pemeriksaan & Obat,75908,79000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+297,CLM000297,P00252,ISPA (J06),Rawat Inap Standar,3220095,3062000,Rawat Inap,3,Kelas I,Disetujui,-,Normal,0
+298,CLM000298,P00674,Infark Miokard (I21),USG Abdomen,798207,2355000,Rawat Jalan,1,Kelas I,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+299,CLM000299,P00287,Diabetes Mellitus (E11),Rawat Inap Standar,2979368,3121000,Rawat Inap,3,Kelas III,Disetujui,-,Normal,0
+300,CLM000300,P00098,UTI (N39),Cek Lab + Edukasi,228210,222000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+301,CLM000301,P00323,Infark Miokard (I21),Kemoterapi,4670139,8482000,Rawat Inap,4,Kelas II,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+302,CLM000302,P00109,Persalinan Normal (O80),Pemeriksaan & Obat,87406,87000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+303,CLM000303,P00123,Diabetes Mellitus (E11),Cek Lab + Edukasi,187416,187000,Rawat Jalan,1,Kelas III,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+304,CLM000304,P00365,Infark Miokard (I21),Operasi Tonsilektomi,5446623,5395000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+305,CLM000305,P00564,Gastritis (komplikasi) (K29),Pemeriksaan Dokter,55379,165000,Rawat Jalan,1,Kelas I,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
+306,CLM000306,P00411,Stroke Iskemik (I63),Dialisis,1358175,1299000,Rawat Inap,1,Kelas II,Diverifikasi,-,Normal,0
+307,CLM000307,P00455,ISPA (J06),Pemeriksaan Dokter,55271,98000,Rawat Jalan,1,Kelas I,Diverifikasi,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas I padahal Kelas I,1
+308,CLM000308,P00700,Gagal Ginjal Kronik (N18),Cek Lab + Edukasi,224171,214000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+309,CLM000309,P00252,Nyeri Kepala (R51),Pemeriksaan & Obat,74744,115000,Rawat Jalan,1,Kelas III,Ditolak,Type of Room Charge,Klaim untuk kelas kamar lebih tinggi daripada kelas sebenarnya; Klaim sebagai Kelas II padahal Kelas III,1
+310,CLM000310,P00539,Gastritis (K29),Dialisis,1554194,1552000,Rawat Inap,4,Kelas III,Diverifikasi,-,Normal,0
+311,CLM000311,P00515,Pneumonia (J18),Operasi ORIF,9146478,16006000,Rawat Inap,8,Kelas I,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 8 hari,1
+312,CLM000312,P00599,Gastritis (K29),Cek Lab + Edukasi,219561,225000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+313,CLM000313,P00225,Kanker Payudara (C50),USG Abdomen,660817,667000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+314,CLM000314,P00715,Stroke Iskemik (I63),Fisioterapi,233881,244000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+315,CLM000315,P00505,Anemia (D64),Obat + Nebulizer,108597,172000,Rawat Jalan,1,Kelas II,Diverifikasi,Services Unbundling,Layanan digabung dipisah menjadi beberapa klaim terpisah,1
+316,CLM000316,P00629,Fraktur Lengan (S52),Endoskopi,2010697,1922000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+317,CLM000317,P00146,Appendisitis (K35),USG Abdomen,699229,671000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+318,CLM000318,P00140,Persalinan Normal (O80),Kemoterapi,4717753,4939000,Rawat Inap,3,Kelas III,Disetujui,-,Normal,0
+319,CLM000319,P00629,Stroke Iskemik (I63),Operasi Appendektomi,11333124,10769000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+320,CLM000320,P00587,Infark Miokard (I21),USG Abdomen,736991,747000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+321,CLM000321,P00509,ISPA (J06),Paket Persalinan,4421661,8866000,Rawat Inap,1,Kelas II,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+322,CLM000322,P00344,Epilepsi (G40),Rawat Inap Standar,3290265,3363000,Rawat Inap,3,Kelas II,Disetujui,-,Normal,0
+323,CLM000323,P00449,Gagal Ginjal Kronik (N18),Cek Lab + Edukasi,185071,185000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+324,CLM000324,P00667,Gastritis (K29),Cek Lab + Edukasi,195935,205000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+325,CLM000325,P00175,Infark Miokard (I21),Cek Lab + Edukasi,215225,425000,Rawat Jalan,1,Kelas II,Diverifikasi,Unnecessary Treatment,Tindakan/CT-scan tidak sesuai indikasi medis,1
+326,CLM000326,P00622,Gagal Ginjal Kronik (N18),Cek Lab + Edukasi,213029,341000,Rawat Jalan,5,Kelas I,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 5 hari,1
+327,CLM000327,P00051,Infark Miokard (I21),CT Scan Kepala,2434093,2474000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+328,CLM000328,P00205,Appendisitis (K35),Rawat Inap Standar,2931265,4679000,Rawat Inap,3,Kelas I,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+329,CLM000329,P00677,Tonsilitis (J35),Pemeriksaan Dokter,50572,49000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+330,CLM000330,P00232,Tonsilitis (J35),CT Scan Kepala,2755112,2755000,Rawat Jalan,1,Kelas I,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+331,CLM000331,P00604,Gastritis (K29),Operasi Tonsilektomi,6203271,6431000,Rawat Inap,1,Kelas III,Disetujui,-,Normal,0
+332,CLM000332,P00242,Gastroenteritis (A09),Obat + Nebulizer,111608,379000,Rawat Jalan,1,Kelas II,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+333,CLM000333,P00172,Fraktur Lengan (S52),Endoskopi,1815926,1906000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+334,CLM000334,P00610,Tonsilitis (J35),Paket Persalinan,4456624,4465000,Rawat Inap,6,Kelas I,Diverifikasi,-,Normal,0
+335,CLM000335,P00013,Hepatitis (B15),CT Scan Kepala,2614173,2736000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+336,CLM000336,P00109,Kanker Payudara (C50),Endoskopi,2015052,1968000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+337,CLM000337,P00586,Hepatitis (B15),Pemeriksaan & Obat,85616,85000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+338,CLM000338,P00340,Gastritis (K29),Rawat Inap Standar,2933211,5133000,Rawat Inap,8,Kelas III,Ditolak,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 8 hari,1
+339,CLM000339,P00702,Appendisitis (K35),USG Abdomen,774519,757000,Rawat Jalan,1,Kelas I,Disetujui,-,Normal,0
+340,CLM000340,P00662,Diabetes Mellitus (E11),Operasi Appendektomi,13078479,13559000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+341,CLM000341,P00528,Persalinan Normal (O80),Pemeriksaan Dokter,51553,52000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+342,CLM000342,P00206,Hipertensi (I10),Operasi Appendektomi,11621932,11998000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+343,CLM000343,P00651,Appendisitis (K35),Dialisis,1710195,1706000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+344,CLM000344,P00353,Persalinan Normal (O80),USG Abdomen,697648,674000,Rawat Jalan,1,Kelas III,Disetujui,-,Normal,0
+345,CLM000345,P00220,Gastritis (K29),Dialisis,1357519,1396000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+346,CLM000346,P00010,Gastroenteritis (A09),Fisioterapi,263021,421000,Rawat Jalan,5,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 5 hari,1
+347,CLM000347,P00659,Tonsilitis (J35),Operasi ORIF,10692990,20317000,Rawat Inap,11,Kelas III,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 11 hari,1
+348,CLM000348,P00105,Demam Berdarah (A91),Operasi Tonsilektomi,6426619,6415000,Rawat Inap,1,Kelas II,Disetujui,-,Normal,0
+349,CLM000349,P00284,Pneumonia (J18),USG Abdomen,682288,658000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+350,CLM000350,P00059,Hepatitis (B15),Operasi ORIF,11493672,11217000,Rawat Inap,4,Kelas II,Disetujui,-,Normal,0
+351,CLM000351,P00398,Hipertensi (I10),CT Scan Kepala,2648945,2643000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+352,CLM000352,P00368,UTI (N39),Obat + Nebulizer,122123,258000,Rawat Jalan,1,Kelas III,Diverifikasi,Phantom Billing,Tidak ada bukti pelayanan di sistem (klaim fiktif),1
+353,CLM000353,P00573,Persalinan Normal (O80),Dialisis,1507677,2412000,Rawat Inap,7,Kelas II,Diverifikasi,Prolonged of Stay,Lama rawat diperpanjang tanpa indikasi medis; Lama rawat dilaporkan 7 hari,1
+354,CLM000354,P00600,Nyeri Kepala (R51),Pemeriksaan & Obat,90886,87000,Rawat Jalan,1,Kelas II,Diverifikasi,-,Normal,0
+355,CLM000355,P00513,Appendisitis (K35),USG Abdomen,656386,689000,Rawat Jalan,1,Kelas II,Disetujui,-,Normal,0
+356,CLM000356,P00584,Epilepsi (G40),Cek Lab + Edukasi,211551,212000,Rawat Jalan,1,Kelas III,Diverifikasi,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+357,CLM000357,P00650,Hipertensi (I10),Rawat Inap Standar,3067182,10456000,Rawat Inap,4,Kelas II,Diverifikasi,Inflated Bill,Harga layanan/obat dinaikkan berlebihan,1
+358,CLM000358,P00630,Gagal Ginjal Kronik (N18),Dialisis,1364146,1323000,Rawat Inap,6,Kelas II,Disetujui,-,Normal,0
+359,CLM000359,P00441,Persalinan Normal (O80) (J18),Cek Lab + Edukasi,204133,204000,Rawat Jalan,1,Kelas II,Ditolak,Repeat Billing,Klaim ganda/berulang untuk layanan sama pada tanggal berbeda,1
+360,CLM000360,P00320,ISPA (komplikasi) (J06),Pemeriksaan Dokter,48727,94000,Rawat Jalan,1,Kelas II,Diverifikasi,Upcoding,Diagnosis diubah ke versi lebih berat / prosedur di-upcode untuk tarif lebih tinggi,1
