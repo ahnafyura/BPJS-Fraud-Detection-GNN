@@ -77,7 +77,7 @@
 ---
 
 ## 🏗️ Architecture & Pipeline
-
+```
 ```mermaid
 flowchart TD
     %% Data Ingestion
