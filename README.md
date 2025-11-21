@@ -44,10 +44,9 @@
 * [✨ Features](#-features)
 * [🏗️ Architecture](#️-architecture--pipeline)
 * [⚙️ Setup Environment](#️-setup-environment)
-* [📥 Data Loading (ETL)](#-data-loading-etl)
-* [🧠 Graph Projection + Louvain](#-graph-projection--louvain)
+* [🔗 Graph Model Design](#-graph-model-design)
 * [🌐 Visualizations](#-visualizations)
-* [📁 Export for GNN](#-export-for-gnn)
+* [👁️ Graph Visualization](#️-graph-visualization)
 * [📄 License](#-license)
 
 ---
@@ -140,9 +139,9 @@ Library inti:
 * `node2vec`
 ---
 
-# 🏗️ 4. Neo4j Setup
+# 🏗️ Neo4j Setup
 
-## 4.1 Instalasi Neo4j Desktop
+## 1. Instalasi Neo4j Desktop
 
 Download: [https://neo4j.com/download/](https://neo4j.com/download/)
 
@@ -154,7 +153,7 @@ Setelah instalasi:
   * neo4j123
 3. Jalankan database
 
-# 🚀 5. Quick Start
+# 🚀 2. Quick Start
 
 Run full ETL, Louvain, and GNN pipeline
 ```bash
@@ -169,16 +168,16 @@ python -m etl.export
 python -m gnn.hybrid_gnn
 ```
 
-# 🔗 6. Graph Model Design
+# 🔗 Graph Model Design
 
 ## Node Types
 
 * **Claim**
 * **Patient**
 
-# 👁️ 7. Graph Visualization
+# 👁️ Graph Visualization
 
-## 7.1 Neo4j Browser
+## Neo4j Browser
 
 Melihat 50 Claim:
 
@@ -188,12 +187,6 @@ RETURN * LIMIT 50;
 ```
 
 ---
-
-# 8. File Penting
-
-Louvain: `louvain/louvain.py`
-
-GNN Training: `gnn/hybrid_gnn.py`
 
 ## 📄 **License**
 
