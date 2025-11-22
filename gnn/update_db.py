@@ -20,7 +20,7 @@ def run():
     query = """
     UNWIND $batch AS row
     MATCH (n) WHERE id(n) = row.node_id
-    SET n.gnn_score = row.fraud_certainty,
+    SET n.fraud_certainty = row.fraud_certainty,
         n.fraud_label = toInteger(row.is_fraud),
         n.risk_category = CASE 
             WHEN row.fraud_certainty > 0.8 THEN 'High Risk'
@@ -43,9 +43,9 @@ def run():
     print("\nData Verification (Top 5 High Risk):")
     check_query = """
     MATCH (n) 
-    WHERE n.gnn_score IS NOT NULL 
-    RETURN id(n), labels(n)[0], n.gnn_score, n.risk_category 
-    ORDER BY n.gnn_score DESC LIMIT 5
+    WHERE n.fraud_certainty IS NOT NULL 
+    RETURN id(n), labels(n)[0], n.fraud_certainty, n.risk_category 
+    ORDER BY n.fraud_certainty DESC LIMIT 5
     """
     result = graph.run(check_query).to_data_frame()
     print(result)
