@@ -48,7 +48,8 @@ def run_main_menu(arg):
             export.export_data()
             hybrid_gnn.run()
             update_db.run()
-
+            merge_pipeline.retrieve_data_to_csv()
+            
             input(etc)
 
         elif (arg == "2"):
