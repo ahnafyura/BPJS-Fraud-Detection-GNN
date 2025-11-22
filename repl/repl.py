@@ -1,5 +1,5 @@
 import sys
-from gnn import hybrid_gnn
+from gnn import hybrid_gnn, update_db
 from louvain import louvain
 from etl import load
 from etl import export
@@ -43,6 +43,7 @@ def run_main_menu(arg):
             louvain.run()
             export.export_data()
             hybrid_gnn.run()
+            update_db.run()
 
             input(etc)
 
@@ -63,7 +64,8 @@ def run_main_menu(arg):
 
         elif (arg == "5"):
             hybrid_gnn.run()
-
+            update_db.run()
+            
             input(etc)
 
         elif (arg == "6"):
@@ -113,7 +115,7 @@ main_menu = Menu("Main Menu",
     2. Load Raw Data to Neo4j
     3. Export Neo4j Graph to CSV
     4. Run Louvain on Current Graph
-    5. Run GNN using Exported Data
+    5. Run GNN using Exported Data and Update DB
     6. Change Neo4j Database
     7. Change raw_input_data Directory
     8. Set test_size
