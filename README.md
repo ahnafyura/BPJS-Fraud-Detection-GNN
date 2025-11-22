@@ -98,25 +98,43 @@
 
 ```mermaid
 flowchart TD
-    %% Data Ingestion
-    DATA[📄 Raw CSV Data] -->|ETL: load_data.py| NEO4J[(🍃 Neo4j Database)]
+    %% ============================
+    %%      DATA INGESTION
+    %% ============================
+    DATA[📄 Raw Claims CSV] -->|ETL: load_data.py| NEO4J[(🍃 Neo4j Database)]
 
-    %% Graph Data Science
+    %% ============================
+    %%   GRAPH DATA SCIENCE (GDS)
+    %% ============================
     NEO4J -->|Graph Projection| GDS[⚙️ Neo4j GDS Library]
     GDS -->|Community Detection| LOUVAIN[Louvain Algorithm]
     GDS -->|Structural Embedding| N2V[Node2Vec]
 
-    %% AI Modeling
+    %% ============================
+    %%        AI MODELING
+    %% ============================
     subgraph AI_Core [🧠 Hybrid AI Engine]
-        LOUVAIN & N2V -->|Export Features| HYBRID[Hybrid GNN Model]
+        LOUVAIN -->|Export Features| HYBRID[Hybrid GNN Model]
+        N2V -->|Node Embeddings| HYBRID
         HYBRID -->|GraphSAGE + GAT| EMBED[Node Embeddings]
         EMBED -->|Ensemble| XGB[XGBoost Classifier]
     end
 
-    %% Output & Viz
-    XGB -->|Risk Score & Explanation| RESULT[📄 Final Report CSV]
-    RESULT -->|Write Back: update_db.py| NEO4J
-    NEO4J -->|Visual Investigation| BLOOM[🌸 Neo4j Bloom]
+    %% ============================
+    %%     POST-PROCESSING PIPELINE
+    %% ============================
+    XGB -->|Raw Predictions| GNN_OUT[📄 GNN Output CSV]
+
+    DATA -.->|Input 1: Original Data| MERGE
+    GNN_OUT -->|Input 2: Probabilities| MERGE[🛠️ Robust Merge Pipeline<br/>(utils/merge_pipeline.py)]
+
+    MERGE -->|Safe Left-Join & Filtering| RESULT[📊 FINAL FRAUD REPORT]
+
+    %% ============================
+    %%     WRITE-BACK & VISUALIZATION
+    %% ============================
+    RESULT -->|Update Properties (update_db.py)| NEO4J
+    NEO4J -->|Rule-Based Styling| BLOOM[🌸 Neo4j Bloom<br/>(Visualization Dashboard)]
 ```
 
 ## 📊 Neo4j Bloom Visualization Results
