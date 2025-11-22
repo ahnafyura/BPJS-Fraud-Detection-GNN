@@ -106,13 +106,14 @@
 ## 🏗️ Architecture & Pipeline
 ```mermaid
 flowchart LR
-    classDef neonBlue fill:#00c8ff,stroke:#007a99,stroke-width:2px,color:#000,font-weight:bold;
-    CSV[CSV Input<br/>(Raw Claims)]:::neonBlue 
-        --> NEO4J[Neo4j Graph Storage]:::neonBlue
-        --> LOUVAIN[Louvain Community Detection]:::neonBlue
-        --> GNN[Hybrid GNN Model<br/>(GraphSAGE)]:::neonBlue
-        --> MERGE[Merge Pipeline<br/>(merge_pipeline.py)]:::neonBlue
-        --> REPORT[Final Fraud Report<br/>(merged.csv + XLSX)]:::neonBlue
+  classDef neonBlue fill:#00c8ff,stroke:#007a99,stroke-width:2px,color:#000,font-weight:bold;
+  CSV[CSV Input (Raw Claims)]:::neonBlue
+  CSV --> NEO4J[Neo4j Graph Storage]:::neonBlue
+  NEO4J --> LOUVAIN[Louvain Community Detection]:::neonBlue
+  LOUVAIN --> GNN[Hybrid GNN Model (GraphSAGE)]:::neonBlue
+  GNN --> MERGE[Merge Pipeline (merge_pipeline.py)]:::neonBlue
+  MERGE --> REPORT[Final Fraud Report (merged.csv + xlsx)]:::neonBlue
+
 
 ```
 ---
