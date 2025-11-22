@@ -67,8 +67,13 @@
 * [✨ Features](#-features)
 * [🏗️ Architecture](#️-architecture--pipeline)
 * [📊 Neo4j Bloom Visualization Results](#️-Neo4j-Bloom-Visualization-Results)
+* [🖥️ Interface Showcase](#️-interface-showcase)
+* [🧱 System Requirements](#-system-requirements)
+* [🐍 Create Virtual Environment](#-create-virtual-environment)
+* [📦 Install Dependencies](#-install-dependencies)
+* [🏗️ Neo4j Setup](#️-neo4j-setup)
+* [🚀 Quick Start](#-quick-start)
 * [🔗 Graph Model Design](#-graph-model-design)
-* [🌐 Visualizations](#-visualizations)
 * [👁️ Graph Visualization](#️-graph-visualization)
 * [📄 License](#-license)
 
@@ -179,7 +184,7 @@ flowchart TB
 
 ---
 
-<h2 align="center">💻 Interface Showcase</h2>
+## 🖥️ Interface Showcase
 
 <table width="100%">
   <tr>
@@ -214,7 +219,7 @@ flowchart TB
 
 ---
 
-## 🧱 1. System Requirements
+## 🧱 System Requirements
 
 * Python ≥ 3.10
 * Neo4j Desktop / Neo4j AuraDB
@@ -223,7 +228,7 @@ flowchart TB
 
 ---
 
-## 🐍 2. Create Virtual Environment
+## 🐍 Create Virtual Environment
 
 ```bash
 git clone https://github.com/ahnafyura/GRAFANA
@@ -232,7 +237,7 @@ python3 -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
-## 📦 3. Install Dependencies
+## 📦 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -249,9 +254,9 @@ Library inti:
 * `node2vec`
 ---
 
-# 🏗️ Neo4j Setup
+## 🏗️ Neo4j Setup
 
-## 1. Instalasi Neo4j Desktop
+### Instalasi Neo4j Desktop
 
 Download: [https://neo4j.com/download/](https://neo4j.com/download/)
 
@@ -263,7 +268,12 @@ Setelah instalasi:
   * neo4j123
 3. Jalankan database
 
-# 🚀 2. Quick Start
+## 🚀 Quick Start
+
+Run interactive REPL user interface
+```bash
+python -m repl.repl
+```
 
 Run full ETL, Louvain, and GNN pipeline
 ```bash
@@ -278,9 +288,9 @@ python -m etl.export
 python -m gnn.hybrid_gnn
 ```
 
-# 🔗 Graph Model Design
+## 🔗 Graph Model Design
 
-## Node Types
+### Node Types
 
 * **Claim**
 * **Patient**
@@ -289,9 +299,9 @@ python -m gnn.hybrid_gnn
 * **ServiceType**
 * **CareClass**
 
-# 👁️ Graph Visualization
+## 👁️ Graph Visualization
 
-## Neo4j Browser
+### Neo4j Browser
 
 Melihat 50 Claim:
 
