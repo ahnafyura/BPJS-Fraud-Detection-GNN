@@ -100,9 +100,54 @@ flowchart TD
     NEO4J -->|Visual Investigation| BLOOM[🌸 Neo4j Bloom]
 ```
 
-# ⚙️ Setup Environment
+## 📊 Neo4j Bloom Visualization Results
 
-Panduan ini menjelaskan seluruh instalasi dari nol hingga siap menjalankan pipeline GRAFANA.
+Berikut adalah hasil visualisasi graf berdasarkan prediksi model GNN menggunakan **Rule-Based Styling** di Neo4j Bloom.
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🔴 High Risk Fraud</h3>
+      <div align="center">
+        <img src="img/fraud_model.png" alt="Fraud Model" width="100%">
+      </div>
+      <p align="center">
+        Node yang terdeteksi sebagai <b>Fraud</b> dengan probabilitas tinggi (Certainty > 0.8).
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">⚪ Normal Claims</h3>
+      <div align="center">
+        <img src="img/normal_model.png" alt="Normal Model" width="100%">
+      </div>
+      <p align="center">
+        Klaim yang diprediksi <b>Aman/Normal</b> dengan probabilitas fraud sangat rendah.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">🟣 Prediction Mismatch</h3>
+      <div align="center">
+        <img src="img/bukanFraud_fraudPrediction.png" alt="Mismatch Prediction" width="100%">
+      </div>
+      <p align="center">
+        <b>False Positive/Negative:</b> Node dimana prediksi model berbeda dengan data aktual (Predicted != Actual).
+      </p>
+    </td>
+    <td width="50%">
+      <h3 align="center">🔘 Uncertain / Mid-Range</h3>
+      <div align="center">
+        <img src="img/mid_model.png" alt="Mid Model" width="100%">
+      </div>
+      <p align="center">
+        Klaim dengan skor probabilitas di area abu-abu (0.5 - 0.8), membutuhkan investigasi manual.
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
 
 ## 🧱 1. System Requirements
 
