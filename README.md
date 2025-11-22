@@ -184,11 +184,11 @@ flowchart TB
 <table width="100%">
   <tr>
     <td width="50%" align="center" valign="top">
-      <h3>🖥️ Neo4j Interface</h3>
-      <p><b>Terminal-Based Development</b></p>
-      <img src="vid/vid1.gif" alt="CLI Interface Demo" width="100%" style="border-radius: 5px;">
+      <h3>🕸️ Neo4j Graph Exploration</h3>
+      <p><b>Interactive Fraud Network Visualization</b></p>
+      <img src="vid/vid.gif" alt="Neo4j Graph Visualization" width="100%" style="border-radius: 5px;">
       <br/><br/>
-      <p>
+      <p align="left">
         <b>🔍 Deep Forensic Investigation</b><br>
         ⚡ <b>Visual Relationship Mapping:</b> Trace connections between <code>Claim</code>, <code>Patient</code>, and <code>Diagnosis</code> instantly.<br>
         🏷️ <b>Risk Indicators:</b> Auto-identification of <span style="color:#36D399"><b>FraudSuspect</b></span> and <span style="color:#A5D8FF"><b>Mismatch</b></span> nodes.<br>
