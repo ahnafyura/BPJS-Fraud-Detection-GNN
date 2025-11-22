@@ -96,35 +96,49 @@
 
 ## 🏗️ Architecture & Pipeline
 
-flowchart TD
+flowchart TB
 
-    %% Data Ingestion
-    DATA([Raw Claims CSV]) -->|ETL Load| NEO4J[(Neo4j Database)]
+    %% ============================
+    %%     DATA INGESTION
+    %% ============================
+    DATA[Raw Claims CSV<br/>data/raw/*.csv] 
+        -->|ETL Load| 
+    NEO4J[(Neo4j Database)]
 
-    %% Graph Data Science
-    NEO4J -->|Graph Projection| GDS[Neo4j GDS]
-    GDS -->|Community Detection| LOUVAIN[Louvain Algorithm]
-    GDS -->|Structural Embedding| N2V[Node2Vec]
+    %% ============================
+    %%     GRAPH DATA SCIENCE
+    %% ============================
+    NEO4J -->|Graph Projection| GDS[Neo4j GDS Engine]
 
-    %% AI Hybrid Core
+    GDS -->|Louvain Community Detection| LOUVAIN[Louvain Algorithm]
+    GDS -->|Node2Vec Embedding| N2V[Node2Vec]
+
+    %% ============================
+    %%     HYBRID AI ENGINE
+    %% ============================
     subgraph AI_Core [Hybrid AI Engine]
         LOUVAIN --> HYBRID[Hybrid GNN Model]
         N2V --> HYBRID
-        HYBRID --> EMBED[Node Embeddings]
+        HYBRID --> EMBED[GraphSAGE / GAT Embeddings]
         EMBED --> XGB[XGBoost Classifier]
     end
 
-    %% Post-processing
+    %% ============================
+    %%   POST PROCESSING MERGE PIPELINE
+    %% ============================
     XGB --> GNN_OUT[GNN Output CSV]
 
     DATA -.-> MERGE
-    GNN_OUT --> MERGE[Merge Pipeline Utils]
+    GNN_OUT --> MERGE[Merge Pipeline<br/>utils/merge_pipeline.py]
 
-    MERGE --> RESULT[Final Fraud Report]
+    MERGE --> RESULT[Final Fraud Report CSV]
 
-    %% Writeback & Visualization
-    RESULT --> UPDATE_DB[Update Neo4j Properties]
-    UPDATE_DB --> BLOOM[Neo4j Bloom Visualization]
+    %% ============================
+    %%   WRITE BACK & BLOOM
+    %% ============================
+    RESULT --> UPDATE[Update Neo4j Properties]
+    UPDATE --> BLOOM[Neo4j Bloom Visualization]
+
 
 
 
