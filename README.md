@@ -186,9 +186,7 @@ flowchart TB
     <td width="50%" align="center" valign="top">
       <h3>🖥️ CLI Interface</h3>
       <p><b>Terminal-Based Development</b></p>
-      
       <img src="img/cli_demo.gif" alt="CLI Interface Demo" width="100%" style="border-radius: 5px;">
-      
       <br/><br/>
       <p>
         <b>🚀 Advanced Terminal Experience</b><br>
@@ -198,13 +196,10 @@ flowchart TB
         <i>Professional terminal interface for advanced users and CI/CD integration</i>
       </p>
     </td>
-
     <td width="50%" align="center" valign="top">
       <h3>🌐 Web Interface</h3>
       <p><b>Visual Interactive Experience</b></p>
-      
       <img src="img/web_demo.gif" alt="Web Interface Demo" width="100%" style="border-radius: 5px;">
-      
       <br/><br/>
       <p>
         <b>🎨 Modern Web Dashboard</b><br>
