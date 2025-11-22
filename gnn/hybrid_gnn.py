@@ -8,6 +8,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 from sklearn.model_selection import train_test_split
 import os
 from config import env
+import sys
 
 def run():
     # ---------- CONFIG ----------
@@ -21,6 +22,11 @@ def run():
     EDGES_PATH = env.EDGES_CSV
 
     print(f"Running on DEVICE: {DEVICE}")
+
+
+    # Create output path
+
+    os.makedirs(env.OUTPUT_PATH, exist_ok=True)
 
     # ---------- 1. LOAD DATA ----------
 

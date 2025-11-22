@@ -17,8 +17,8 @@ DATA_PROCESSED_OUT_DIR = "./data/processed/"
 NODES_CSV = "./data/processed/nodes.csv"
 EDGES_CSV = "./data/processed/edges.csv"
 
+OUTPUT_PATH = "./output/"
 BEST_GNN_HYBRID_PATH = "./output/best_hybrid_gnn.pth"
-
 RETRAINED_OUTPUT_FILE = "./output/gnn_retrained_output.csv"
 RESULTS_CLAIMS_FILE = "./output/claims.csv"
 
