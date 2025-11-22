@@ -48,7 +48,7 @@
       <div align="center">
         <img src="img/display.png" alt="Fraud Model" width="100%">
       </div>
-      <p align="center">
+      <p align="left">
         Memperlihatkan hubungan antar entitas dalam visualisasi graf <br>
         🔵 Biru (Claim)<br>
         🟤 Krem / Cokelat Muda (Patient) <br>
