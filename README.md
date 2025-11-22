@@ -186,7 +186,7 @@ flowchart TB
     <td width="50%" align="center" valign="top">
       <h3>🕸️ Neo4j Graph Exploration</h3>
       <p><b>Interactive Fraud Network Visualization</b></p>
-      <img src="vid/vid.gif" alt="Neo4j Graph Visualization" width="100%" style="border-radius: 5px;">
+      <img src="vid/vid1.gif" alt="Neo4j Graph Visualization" width="100%" style="border-radius: 5px;">
       <br/><br/>
       <p align="left">
         <b>🔍 Deep Forensic Investigation</b><br>
