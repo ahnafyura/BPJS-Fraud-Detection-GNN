@@ -43,7 +43,7 @@
 
 * [✨ Features](#-features)
 * [🏗️ Architecture](#️-architecture--pipeline)
-* [⚙️ Setup Environment](#️-setup-environment)
+* [📊 Neo4j Bloom Visualization Results](#️-Neo4j-Bloom-Visualization-Results)
 * [🔗 Graph Model Design](#-graph-model-design)
 * [🌐 Visualizations](#-visualizations)
 * [👁️ Graph Visualization](#️-graph-visualization)
