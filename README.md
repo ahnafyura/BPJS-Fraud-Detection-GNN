@@ -95,9 +95,8 @@
 ---
 
 ## 🏗️ Architecture & Pipeline
-
+```mermaid 
 flowchart TB
-
     %% ============================
     %%     DATA INGESTION
     %% ============================
@@ -139,8 +138,8 @@ flowchart TB
     RESULT --> UPDATE[Update Neo4j Properties]
     UPDATE --> BLOOM[Neo4j Bloom Visualization]
 
-
-
+```
+```
 
 ## 📊 Neo4j Bloom Visualization Results
 
