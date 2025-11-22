@@ -197,16 +197,16 @@ flowchart TB
       </p>
     </td>
     <td width="50%" align="center" valign="top">
-      <h3>🌐 Web Interface</h3>
-      <p><b>Visual Interactive Experience</b></p>
-      <img src="img/web_demo.gif" alt="Web Interface Demo" width="100%" style="border-radius: 5px;">
+      <h3>📟 GRAFANA CLI Dashboard</h3>
+      <p><b>Command-Line Pipeline Orchestrator</b></p>
+      <img src="vid/vid2.gif" alt="GRAFANA CLI Interface" width="100%" style="border-radius: 5px;">
       <br/><br/>
-      <p>
-        <b>🎨 Modern Web Dashboard</b><br>
-        🖱️ Intuitive drag-and-drop<br>
-        📱 Responsive design<br>
-        🎯 Visual progress tracking<br>
-        <i>Beautiful web interface with streamlined workflow for all skill levels</i>
+      <p align="left">
+        <b>🚀 Advanced Terminal Experience</b><br>
+        🛠️ <b>Interactive REPL Menu. <br>
+        ⚙️ <b>Dynamic Configuration. <br>
+        🔌 <b>Live Connection Status. <br>
+        <i>Antarmuka terminal profesional untuk mengelola seluruh siklus hidup pipeline deteksi fraud secara efisien.</i>
       </p>
     </td>
   </tr>
