@@ -57,9 +57,11 @@ def run_patient_claim_analysis(graph: Graph):
     SET x.community_density = community_density
     """)
 
-    print("Analysis completed.")
-
-
-if __name__ == "__main__":
+    print("Louvain successfully run. Graph database successfully updated with community features")
+    
+def run():
     graph = Graph(env.url, auth=(env.uname, env.pw))
     run_patient_claim_analysis(graph)
+
+if __name__ == "__main__":
+    run()

@@ -9,10 +9,10 @@ graph = Graph(env.url, auth=(env.uname, env.pw))
 # File hasil training GNN terakhir
 CSV_PATH = env.RETRAINED_OUTPUT_FILE
 
-print("Membaca file hasil prediksi...")
+print("Reading prediction results file...")
 df = pd.read_csv(CSV_PATH)
 
-print(f"Memulai update untuk {len(df)} nodes ke Neo4j...")
+print(f"Updating {len(df)} nodes in Neo4j...")
 
 # 2. Proses Update (Batching agar cepat)
 # Kita akan menggunakan Cypher query dengan UNWIND untuk kecepatan tinggi
@@ -34,12 +34,12 @@ data_batch = df[['node_id', 'new_gnn_score', 'is_fraud']].to_dict('records') # t
 # Eksekusi Query
 try:
     graph.run(query, batch=data_batch)
-    print("SUKSES! Database Neo4j telah diupdate dengan skor GNN.")
+    print("SUCCESS")
 except Exception as e:
-    print(f"Terjadi kesalahan: {e}")
+    print(f"ERROR: {e}")
 
 # 3. Verifikasi
-print("\nVerifikasi Data (Top 5 High Risk):")
+print("\nData Verification (Top 5 High Risk):")
 check_query = """
 MATCH (n) 
 WHERE n.gnn_score IS NOT NULL 
