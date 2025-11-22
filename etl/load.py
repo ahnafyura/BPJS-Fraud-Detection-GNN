@@ -7,7 +7,7 @@ def load_data():
     graph = Graph(env.url, auth=(env.uname, env.pw))
 
     # 2. Load dataset
-    df = pd.read_csv(env.raw_input_data)
+    df = pd.read_csv(env.RAW_INPUT_DATA)
     df.columns = df.columns.str.strip().str.lower()
     print("Jumlah data:", len(df))
 

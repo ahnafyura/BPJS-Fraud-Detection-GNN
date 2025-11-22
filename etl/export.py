@@ -39,9 +39,6 @@ def export_nodes_and_edges(graph: Graph, out_dir: str):
     edges_df.to_csv(os.path.join(out_dir, "edges.csv"), index=False)
     print(f"edges.csv exported to {out_dir}")
 
-def export_data():
+if __name__ == "__main__":
     graph = Graph(env.url, auth=(env.uname, env.pw))
     export_nodes_and_edges(graph, env.DATA_PROCESSED_OUT_DIR)
-
-if __name__ == "__main__":
-    export_data()
