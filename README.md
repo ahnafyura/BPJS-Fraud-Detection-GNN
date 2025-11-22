@@ -111,11 +111,12 @@ flowchart LR
   NEO4J["Neo4j Graph Storage"]
   LOUV["Louvain Community Detection"]
   GNN["GNN - GraphSAGE"]
-  MERGE["Merge Pipeline (merge_pipeline.py)"]
+  MERGE["Extract from Graph Database (merge_pipeline.py)"]
   REPORT["Final Fraud Report (merged.csv)"]
+  VISUALIZATION["Neo4j Bloom"]
 
   %% connections (left -> right)
-  CSV --> NEO4J --> LOUV --> GNN --> MERGE --> REPORT
+  CSV --> NEO4J --> LOUV --> GNN --> MERGE --> REPORT --> VISUALIZATION
 
   %% styling - blue neon for each box
   style CSV fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
@@ -124,7 +125,7 @@ flowchart LR
   style GNN fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
   style MERGE fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
   style REPORT fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
-
+  style VISUALIZATION fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
 
 
 ```
