@@ -105,34 +105,28 @@
 
 ## 🏗️ Architecture & Pipeline
 ```mermaid
-flowchart TD
-    %% Data ingestion
-    RAW[Raw claims CSV (data/raw/*.csv)] -->|etl/load.py| NEO4J[(Neo4j DB)]
-
-    %% Graph processing / GDS
-    NEO4J -->|gds projection| GDS[Neo4j GDS Engine]
-    GDS -->|community detection| LOUVAIN[Louvain]
-    GDS -->|embedding| NODE2V[Node2Vec]
-
-    %% Hybrid AI stack
-    subgraph AI [Hybrid AI Engine]
-      LOUVAIN -->|features| HYBRID[Hybrid GNN Model]
-      NODE2V -->|embeddings| HYBRID
-      HYBRID -->|node embeddings| EMBED[Node Embeddings]
-      EMBED -->|tabular ensemble| XGB[XGBoost Classifier / MLP]
-    end
-
-    %% Post processing & merge
-    XGB --> GNN_OUT[GNN output CSV]
-    RAW -.-> MERGE[Merge Pipeline (utils/merge_pipeline.py)]
-    GNN_OUT --> MERGE
-    MERGE --> RESULT[Final fraud report CSV]
-
-    %% Write-back & visualisation
-    RESULT -->|update_db.py| NEO4J
-    NEO4J -->|visualize| BLOOM[Neo4j Bloom Dashboard]
-
-
+flowchart TB
+  %% Data ingestion
+  RAW[Raw_Claims_CSV] -->|ETL Load| NEO4J[Neo4j_DB]
+  %% Graph processing
+  NEO4J -->|Graph Projection| GDS[Neo4j_GDS]
+  GDS -->|Community Detection| LOUVAIN[Louvain]
+  GDS -->|Node Embedding| NODE2V[Node2Vec]
+  %% Hybrid AI engine
+  subgraph AI [Hybrid AI Engine]
+    LOUVAIN --> HYBRID[Hybrid_GNN]
+    NODE2V --> HYBRID
+    HYBRID --> EMBED[Node_Embeddings]
+    EMBED --> XGB[XGBoost]
+  end
+  %% Post processing & merge
+  XGB --> GNN_OUT[GNN_Output_CSV]
+  RAW -.-> MERGE[Merge_Pipeline]
+  GNN_OUT --> MERGE
+  MERGE --> RESULT[Final_Fraud_Report]
+  %% Writeback & visualization
+  RESULT --> UPDATE[Update_Neo4j_Properties]
+  UPDATE --> BLOOM[Neo4j_Bloom]
 
 ```
 ---
