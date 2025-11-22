@@ -284,6 +284,10 @@ python -m gnn.hybrid_gnn
 
 * **Claim**
 * **Patient**
+* **Diagnosis**
+* **Procedure**
+* **ServiceType**
+* **CareClass**
 
 # 👁️ Graph Visualization
 
