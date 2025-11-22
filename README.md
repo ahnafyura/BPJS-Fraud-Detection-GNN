@@ -95,7 +95,7 @@
 ---
 
 ## 🏗️ Architecture & Pipeline
-```
+
 flowchart TD
 
     %% Data Ingestion
