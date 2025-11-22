@@ -1,11 +1,15 @@
 import sys
-from gnn import hybrid_gnn
+
+from joblib.memory import traceback
+from gnn import hybrid_gnn, update_db
 from louvain import louvain
 from etl import load
 from etl import export
 from config import env
 from getpass import getpass
 import os
+
+from utils import merge_pipeline
 
 class Menu:
     def __init__(self, name, text, runner):
@@ -37,70 +41,80 @@ def run_main_menu(arg):
     etc = "\nEnter to Continue..."
     cctc = "Ctrl+C to Cancel"
 
-    if (arg == "1"):
-        load.load_data()
-        louvain.run()
-        export.export_data()
-        hybrid_gnn.run()
+    try:
+        if (arg == "1"):
+            load.load_data()
+            louvain.run()
+            export.export_data()
+            hybrid_gnn.run()
+            update_db.run()
 
-        input(etc)
+            input(etc)
 
-    elif (arg == "2"):
-        load.load_data()
+        elif (arg == "2"):
+            load.load_data()
 
-        input(etc)
-        
-    elif (arg == "3"):
-        export.export_data()
+            input(etc)
+            
+        elif (arg == "3"):
+            export.export_data()
 
-        input(etc)
+            input(etc)
 
-    elif (arg == "4"):
-        louvain.run()
+        elif (arg == "4"):
+            louvain.run()
 
-        input(etc)
+            input(etc)
 
-    elif (arg == "5"):
-        hybrid_gnn.run()
+        elif (arg == "5"):
+            hybrid_gnn.run()
+            update_db.run()
+            merge_pipeline.retrieve_data_to_csv()
+            
+            input(etc)
 
-        input(etc)
-
-    elif (arg == "6"):
-        print(cctc)
-        try:
-            env.url = input("Enter URL: ")
-            env.uname = input("Enter username: ")
-            env.pw = getpass("Enter password: ")
-        except KeyboardInterrupt:
-            print("\nCancelled")
-    
-    elif (arg == "7"):
-        print(cctc)
-        try:
-            env.raw_input_data = input("Enter directory:")
-
-        except KeyboardInterrupt:
-            print("\nCancelled")
-    
-    elif (arg == "8"):
-        while True:
+        elif (arg == "6"):
             print(cctc)
             try:
-                env.test_size = max(0.1, min(.9, float(input("Enter a number [0.1-.9]:"))))
-                break
-            
+                env.url = input("Enter URL: ")
+                env.uname = input("Enter username: ")
+                env.pw = getpass("Enter password: ")
             except KeyboardInterrupt:
                 print("\nCancelled")
-                break
+        
+        elif (arg == "7"):
+            print(cctc)
+            try:
+                env.raw_input_data = input("Enter directory:")
 
-            except ValueError:
-                continue
+            except KeyboardInterrupt:
+                print("\nCancelled")
+        
+        elif (arg == "8"):
+            while True:
+                print(cctc)
+                try:
+                    env.test_size = max(0.1, min(.9, float(input("Enter a number [0.1-.9]:"))))
+                    break
+                
+                except KeyboardInterrupt:
+                    print("\nCancelled")
+                    break
 
-    elif (arg == "9"):
-        env.skip_gnn_training = not env.skip_gnn_training
+                except ValueError:
+                    continue
 
-    else:
-        print("Invalid Input!")
+        elif (arg == "9"):
+            env.skip_gnn_training = not env.skip_gnn_training
+
+        else:
+            print("Invalid Input!")
+    
+    except Exception as e:
+        print("ERROR")
+        print(traceback.format_exc())
+
+        input(etc)
 main_menu = Menu("Main Menu", 
     f"""
 
@@ -108,7 +122,7 @@ main_menu = Menu("Main Menu",
     2. Load Raw Data to Neo4j
     3. Export Neo4j Graph to CSV
     4. Run Louvain on Current Graph
-    5. Run GNN using Exported Data
+    5. Run GNN using Exported Data and Update DB
     6. Change Neo4j Database
     7. Change raw_input_data Directory
     8. Set test_size
@@ -139,7 +153,7 @@ if __name__ == "__main__":
 
 
 
-    Connected to Neo4j
+    Neo4j Credentials
         url: {env.url}
         uname: {env.uname}
         password: HIDDEN

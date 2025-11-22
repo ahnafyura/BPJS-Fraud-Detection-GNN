@@ -8,6 +8,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 from sklearn.model_selection import train_test_split
 import os
 from config import env
+import sys
 
 def run():
     # ---------- CONFIG ----------
@@ -21,6 +22,11 @@ def run():
     EDGES_PATH = env.EDGES_CSV
 
     print(f"Running on DEVICE: {DEVICE}")
+
+
+    # Create output path
+
+    os.makedirs(env.OUTPUT_PATH, exist_ok=True)
 
     # ---------- 1. LOAD DATA ----------
 
@@ -238,16 +244,16 @@ def run():
 
     # Boolean column (True/False)
     claim_nodes = nodes_df[nodes_df['labels'].str.contains("Claim")].copy()
-    claim_nodes['predicted_fraud'] = np.round(claim_nodes['fraud_certainty']).astype(int)
-    claim_nodes[['fraud_certainty', 'predicted_fraud']].head() # type: ignore
+    claim_nodes['rounded_fraud_certainty'] = np.round(claim_nodes['fraud_certainty']).astype(int)
+    claim_nodes[['fraud_certainty', 'rounded_fraud_certainty']].head() # type: ignore
 
-    accuracy = (claim_nodes['predicted_fraud'] == claim_nodes['is_fraud']).mean()
+    accuracy = (claim_nodes['rounded_fraud_certainty'] == claim_nodes['is_fraud']).mean()
     print(f"Accuracy: {accuracy:.4f}")
 
     claims_cols = [
         'node_id', 'tarif_seharusnya', 
         'fraud_type', 'tarif_diklaim', 'catatan', 'lama_rawat', 
-        'is_fraud', 'status_klaim', 'id_klaim', 'fraud_certainty', 'predicted_fraud']
+        'is_fraud', 'status_klaim', 'id_klaim', 'fraud_certainty', 'rounded_fraud_certainty']
     claim_nodes.to_csv(env.RESULTS_CLAIMS_FILE, columns=claims_cols, index=False)
     print(f"Output saved at: {os.path.abspath(env.RETRAINED_OUTPUT_FILE)}")
 

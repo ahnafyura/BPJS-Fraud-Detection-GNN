@@ -2,7 +2,8 @@
 # NEO4J CONNECTION CONFIG
 # ======================
 
-# default credentials
+# default credential
+
 url = "bolt://localhost:7687"
 uname = "neo4j"
 pw = "neo4j123"
@@ -17,8 +18,9 @@ DATA_PROCESSED_OUT_DIR = "./data/processed/"
 NODES_CSV = "./data/processed/nodes.csv"
 EDGES_CSV = "./data/processed/edges.csv"
 
+FINAL_REPORT_CSV = "./output/FINAL_REPORT.csv"
+OUTPUT_PATH = "./output/"
 BEST_GNN_HYBRID_PATH = "./output/best_hybrid_gnn.pth"
-
 RETRAINED_OUTPUT_FILE = "./output/gnn_retrained_output.csv"
 RESULTS_CLAIMS_FILE = "./output/claims.csv"
 
