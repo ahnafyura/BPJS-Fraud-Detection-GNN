@@ -1,33 +1,19 @@
-# ======================
-# NEO4J CONNECTION CONFIG
-# ======================
+from config import base
 
-# default credentials
-url = "bolt://localhost:7687"
-uname = "neo4j"
-pw = "neo4j123"
+url = base.url
+uname = base.uname
+pw = base.pw
 
-# ======================
-# PATH CONFIG
-# ======================
-RAW_INPUT_DATA = "./data/raw/claims_synthetic_840.csv"
-# RAW_INPUT_DATA = "./data/raw/claims_synthetic_360.csv"
+raw_input_data = base.RAW_INPUT_DATA
+DATA_PROCESSED_OUT_DIR = base.DATA_PROCESSED_OUT_DIR
 
-DATA_PROCESSED_OUT_DIR = "./data/processed/"
+NODES_CSV = base.NODES_CSV
+EDGES_CSV = base.EDGES_CSV
 
-NODES_CSV = "./data/processed/nodes.csv"
-EDGES_CSV = "./data/processed/edges.csv"
+BEST_GNN_HYBRID_PATH = base.BEST_GNN_HYBRID_PATH
 
-BEST_GNN_HYBRID_PATH = "./output/best_hybrid_gnn.pth"
+RETRAINED_OUTPUT_FILE = base.RETRAINED_OUTPUT_FILE
+RESULTS_CLAIMS_FILE = base.RESULTS_CLAIMS_FILE
 
-RETRAINED_OUTPUT_FILE = "./output/gnn_retrained_output.csv"
-# RESULTS_OUTPUT_FILE = "./output/results.csv"
-RESULTS_CLAIMS_FILE = "./output/claims.csv"
-
-# ======================
-# TRAINING CONFIG
-# ======================
-
-TEST_SIZE = 0.3
-SKIP_GNN_TRAINING = True
-# SKIP_GNN_TRAINING = True
+test_size = base.TEST_SIZE
+skip_gnn_training = base.SKIP_GNN_TRAINING

@@ -1,4 +1,4 @@
-# Grafana: Integrasi Graph Database untuk Fraud Detection dengan Graph Neural Networks (GraphSAGE-GAT & XGBoost Ensemble) & Algoritma Louvain
+# Grafana: Integrasi Graph Database untuk Fraud Detection dengan Graph Neural Network & Algoritma Louvain
 
 <div align="center">
 
@@ -34,7 +34,7 @@
 <div align="center" style="width: 100%; height: 2px; margin: 20px 0; background: linear-gradient(90deg, transparent, #00d9ff, transparent);"></div>
 </div>
 
-> **GRAFANA** (Graph Fraud Analytics) adalah sistem deteksi fraud cerdas yang menggabungkan kekuatan **Neo4j Graph Database** dengan arsitektur Deep Learning **Hybrid GNN (GraphSAGE + GAT)** dan **XGBoost Ensemble**.
+> **GRAFANA** (Graph Fraud Analytics) adalah sistem deteksi fraud cerdas yang menggabungkan kekuatan **Neo4j Graph Database** dengan arsitektur Deep Learning **GNN** dan klasifikasi komunitas **Louvain**.
 >
 > Sistem ini tidak hanya memetakan hubungan pasien-klaim, tetapi juga mempelajari pola struktural (embedding) untuk memprediksi anomali dengan akurasi tinggi, divisualisasikan langsung melalui **Neo4j Bloom**.
 ---
@@ -42,12 +42,11 @@
 ## 📑 **Table of Contents**
 
 * [✨ Features](#-features)
-* [🏗️ Architecture](#️-architecture)
+* [🏗️ Architecture](#️-architecture--pipeline)
 * [⚙️ Setup Environment](#️-setup-environment)
-* [📥 Data Loading (ETL)](#-data-loading-etl)
-* [🧠 Graph Projection + Louvain](#-graph-projection--louvain)
+* [🔗 Graph Model Design](#-graph-model-design)
 * [🌐 Visualizations](#-visualizations)
-* [📁 Export for GNN](#-export-for-gnn)
+* [👁️ Graph Visualization](#️-graph-visualization)
 * [📄 License](#-license)
 
 ---
@@ -59,17 +58,17 @@
 <td width="33%" align="center" style="padding: 20px;">
 <h3>🔗 Knowledge Graph Construction</h3>
 <img src="https://img.shields.io/badge/Neo4j-Graph_Modeling-00d9ff?style=for-the-badge&logo=neo4j" />
-<p>Mengubah data tabular mentah menjadi graf cerdas yang menghubungkan entitas <b>Patient, Claim, Doctor,</b> dan <b>Hospital</b> untuk mengungkap relasi tersembunyi.</p>
+<p>Mengubah data tabular mentah menjadi graf cerdas yang menghubungkan entitas <b>Patient dan Claim</b> untuk mengungkap relasi tersembunyi.</p>
 </td>
 <td width="33%" align="center" style="padding: 20px;">
 <h3>🧬 Structural Feature Engineering</h3>
 <img src="https://img.shields.io/badge/Algo-Louvain_&_Node2Vec-4ecdc4?style=for-the-badge" />
-<p>Mengekstraksi fitur graf tingkat lanjut menggunakan algoritma <b>Louvain Community Detection</b> dan <b>Node2Vec Embeddings</b> untuk menangkap konteks komunitas fraud.</p>
+<p>Mengekstraksi fitur graf tingkat lanjut menggunakan algoritma <b>Louvain Community Detection</b>  untuk menangkap konteks komunitas fraud.</p>
 </td>
 <td width="33%" align="center" style="padding: 20px;">
 <h3>🤖 Hybrid AI Prediction</h3>
 <img src="https://img.shields.io/badge/Model-GraphSAGE_+_GAT_+_XGBoost-f39c12?style=for-the-badge&logo=pytorch" />
-<p>Model ensemble yang menggabungkan kekuatan induktif <b>GraphSAGE</b>, mekanisme atensi <b>GAT</b>, dan boosting <b>XGBoost</b> untuk klasifikasi risiko tinggi.</p>
+<p>Model ensemble yang menggabungkan kekuatan induktif <b>GraphSAGE</b> untuk klasifikasi risiko tinggi.</p>
 </td>
 </tr>
 </table>
@@ -77,7 +76,7 @@
 ---
 
 ## 🏗️ Architecture & Pipeline
- 
+
 ```mermaid
 flowchart TD
     %% Data Ingestion
@@ -101,3 +100,94 @@ flowchart TD
     NEO4J -->|Visual Investigation| BLOOM[🌸 Neo4j Bloom]
 ```
 
+# ⚙️ Setup Environment
+
+Panduan ini menjelaskan seluruh instalasi dari nol hingga siap menjalankan pipeline GRAFANA.
+
+## 🧱 1. System Requirements
+
+* Python ≥ 3.10
+* Neo4j Desktop / Neo4j AuraDB
+* CUDA (opsional, untuk training GNN)
+* Pip & Virtualenv
+
+---
+
+## 🐍 2. Create Virtual Environment
+
+```bash
+git clone https://github.com/ahnafyura/GRAFANA
+cd GRAFANA
+python3 -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+
+## 📦 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Library inti:
+
+* `pandas`
+* `py2neo`
+* `torch`
+* `scikit-learn`
+* `torch-geometric`
+* `xgboost`
+* `node2vec`
+---
+
+# 🏗️ Neo4j Setup
+
+## 1. Instalasi Neo4j Desktop
+
+Download: [https://neo4j.com/download/](https://neo4j.com/download/)
+
+Setelah instalasi:
+
+1. Buat database baru
+2. Username & password default:
+  * neo4j
+  * neo4j123
+3. Jalankan database
+
+# 🚀 2. Quick Start
+
+Run full ETL, Louvain, and GNN pipeline
+```bash
+./wrapper.sh
+```
+
+Run individual steps
+```bash
+python -m etl.load
+python -m louvain.louvain
+python -m etl.export
+python -m gnn.hybrid_gnn
+```
+
+# 🔗 Graph Model Design
+
+## Node Types
+
+* **Claim**
+* **Patient**
+
+# 👁️ Graph Visualization
+
+## Neo4j Browser
+
+Melihat 50 Claim:
+
+```cypher
+MATCH (c:Claim)-[r]-(n)
+RETURN * LIMIT 50;
+```
+
+---
+
+## 📄 **License**
+
+MIT License

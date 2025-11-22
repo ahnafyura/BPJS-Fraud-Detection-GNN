@@ -31,4 +31,7 @@ gnn_model/checkpoints/
 .DS_Store
 
 
-output/.~lock*
+output/.~lock.*#
+
+.~lock.*#
+
