@@ -105,28 +105,14 @@
 
 ## 🏗️ Architecture & Pipeline
 ```mermaid
-flowchart TB
-  %% Data ingestion
-  RAW[Raw_Claims_CSV] -->|ETL Load| NEO4J[Neo4j_DB]
-  %% Graph processing
-  NEO4J -->|Graph Projection| GDS[Neo4j_GDS]
-  GDS -->|Community Detection| LOUVAIN[Louvain]
-  GDS -->|Node Embedding| NODE2V[Node2Vec]
-  %% Hybrid AI engine
-  subgraph AI [Hybrid AI Engine]
-    LOUVAIN --> HYBRID[Hybrid_GNN]
-    NODE2V --> HYBRID
-    HYBRID --> EMBED[Node_Embeddings]
-    EMBED --> XGB[XGBoost]
-  end
-  %% Post processing & merge
-  XGB --> GNN_OUT[GNN_Output_CSV]
-  RAW -.-> MERGE[Merge_Pipeline]
-  GNN_OUT --> MERGE
-  MERGE --> RESULT[Final_Fraud_Report]
-  %% Writeback & visualization
-  RESULT --> UPDATE[Update_Neo4j_Properties]
-  UPDATE --> BLOOM[Neo4j_Bloom]
+flowchart LR
+    classDef neonBlue fill:#00c8ff,stroke:#007a99,stroke-width:2px,color:#000,font-weight:bold;
+    CSV[CSV Input<br/>(Raw Claims)]:::neonBlue 
+        --> NEO4J[Neo4j Graph Storage]:::neonBlue
+        --> LOUVAIN[Louvain Community Detection]:::neonBlue
+        --> GNN[Hybrid GNN Model<br/>(GraphSAGE)]:::neonBlue
+        --> MERGE[Merge Pipeline<br/>(merge_pipeline.py)]:::neonBlue
+        --> REPORT[Final Fraud Report<br/>(merged.csv + XLSX)]:::neonBlue
 
 ```
 ---
