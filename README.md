@@ -106,13 +106,25 @@
 ## 🏗️ Architecture & Pipeline
 ```mermaid
 flowchart LR
-  classDef neonBlue fill:#00c8ff,stroke:#007a99,stroke-width:2px,color:#000,font-weight:bold;
-  CSV[CSV Input (Raw Claims)]:::neonBlue
-  CSV --> NEO4J[Neo4j Graph Storage]:::neonBlue
-  NEO4J --> LOUVAIN[Louvain Community Detection]:::neonBlue
-  LOUVAIN --> GNN[Hybrid GNN Model (GraphSAGE)]:::neonBlue
-  GNN --> MERGE[Merge Pipeline (merge_pipeline.py)]:::neonBlue
-  MERGE --> REPORT[Final Fraud Report (merged.csv + xlsx)]:::neonBlue
+  %% nodes (single horizontal path)
+  CSV["CSV Input - Raw Claims"]
+  NEO4J["Neo4j Graph Storage"]
+  LOUV["Louvain Community Detection"]
+  GNN["GNN - GraphSAGE"]
+  MERGE["Merge Pipeline (merge_pipeline.py)"]
+  REPORT["Final Fraud Report (merged.csv)"]
+
+  %% connections (left -> right)
+  CSV --> NEO4J --> LOUV --> GNN --> MERGE --> REPORT
+
+  %% styling - blue neon for each box
+  style CSV fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+  style NEO4J fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+  style LOUV fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+  style GNN fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+  style MERGE fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+  style REPORT fill:#00e6ff,stroke:#007a99,stroke-width:2px,color:#000
+
 
 
 ```
